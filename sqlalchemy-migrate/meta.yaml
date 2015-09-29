@@ -1,0 +1,28 @@
+package:
+  name: sqlalchemy-migrate
+  version: 0.7.2
+
+source:
+  fn: sqlalchemy-migrate-0.7.2.tar.gz
+  url: https://pypi.python.org/packages/source/s/sqlalchemy-migrate/sqlalchemy-migrate-0.7.2.tar.gz
+  md5: 10382fda16f056491e671b5307dd6713
+
+requirements:
+  build:
+    - python
+    - pip
+    - setuptools
+    - sqlalchemy >=0.6
+    - decorator
+    - tempita >=0.4
+
+  run:
+    - python
+    - sqlalchemy
+    - decorator
+    - tempita
+
+about:
+  home: http://www.sqlalchemy.org/
+  license: Apache Software License
+  summary: 'Database schema migration for SQLAlchemy'

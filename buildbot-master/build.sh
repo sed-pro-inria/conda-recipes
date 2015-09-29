@@ -1,0 +1,2 @@
+cd master
+pip install .

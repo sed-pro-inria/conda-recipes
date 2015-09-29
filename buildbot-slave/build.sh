@@ -1,0 +1,2 @@
+cd slave
+pip install .

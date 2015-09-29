@@ -1,0 +1,39 @@
+package:
+  name: buildbot-master
+  version: 0.8.12
+
+source:
+  fn: v0.8.12.tar.gz
+  url: https://github.com/buildbot/buildbot/archive/v0.8.12.tar.gz
+  md5: 751c76e79e38d04b32c95f0b34f720c8
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - pip
+    - setuptools
+    - python
+    - twisted >=11.0.0
+    - jinja2 >=2.1
+    - sqlalchemy-migrate ==0.7.2
+    - sqlalchemy >=0.6,<=0.7.10
+    - dateutil ==1.5
+  run:
+    - python
+    - twisted >=11.0.0
+    - jinja2 >=2.1
+    - sqlalchemy-migrate ==0.7.2
+    - sqlalchemy >=0.6,<=0.7.10
+    - dateutil ==1.5
+
+test:
+  commands:
+    - buildbot --help
+
+about:
+  home: http://buildbot.net/
+  license: GPL2
+  summary: Buildbot is an open-source framework for automating software build, test, and release processes.
