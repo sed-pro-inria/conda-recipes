@@ -1,0 +1,24 @@
+package:
+  name: openmpi
+  version: 1.8.6
+
+source:
+  fn: openmpi-1.8.6.tar.bz2
+  url: http://www.open-mpi.org/software/ompi/v1.8/downloads/openmpi-1.8.6.tar.bz2
+  md5: eb569e7dc97eeaa5b1876cccf114f377
+
+build:
+  number: 0
+  binary_relocation: true
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+  run:
+    - libgcc
+
+about:
+  home: http://www.open-mpi.org/
+  summary: 'Open MPI: A high performance message passing library'
+  license: 'BSD (https://www.open-mpi.org/community/license.php)'
