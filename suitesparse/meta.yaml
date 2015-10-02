@@ -1,0 +1,23 @@
+package:
+  name: suitesparse
+  version: 4.4.4
+
+source:
+  fn: SuiteSparse-4.4.4.tar.gz
+  url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.4.4.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - gcc
+    - openblas
+  run:
+    - libgcc
+    - openblas
+
+about:
+  home: http://faculty.cse.tamu.edu/davis/suitesparse.html
+  summary: SuiteSparse is a suite of sparse matrix algorithms
