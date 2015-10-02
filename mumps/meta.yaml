@@ -1,0 +1,30 @@
+package:
+  name: mumps
+  version: 4.10.0
+
+source:
+  fn: MUMPS_4.10.0.tar.gz
+  url: http://mumps.enseeiht.fr/MUMPS_4.10.0.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - gcc
+    - openblas
+    - openmpi
+    - scalapack
+    - parmetis
+  run:
+    - libgcc
+    - openblas
+    - openmpi
+    - scalapack
+    - parmetis
+
+about:
+  home: http://mumps.enseeiht.fr/
+  license: Public domain
+  summary: A parallel sparse direct solver
