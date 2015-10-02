@@ -1,0 +1,1221 @@
+===============================================================================
+             Configuring PETSc to compile on your system                       
+===============================================================================
+Configure Help
+   Comma separated lists should be given between [] (use \[ \] in tcsh/csh)
+      For example: --with-mpi-lib=\[/usr/local/lib/libmpich.a,/usr/local/lib/libpmpich.a\]
+   Options beginning with --known- are to provide values you already know
+      For example:--known-endian=big
+   Options beginning with --with- indicate that you are requesting something
+      For example: --with-clanguage=c++
+   <prog> means a program name or a full path to a program
+      For example:--with-cmake=/Users/bsmith/bin/cmake
+   <bool> means a boolean, use either 0 or 1
+   <dir> means a directory
+      For example: --with-external-packages-dir=/Users/bsmith/external
+   For packages use --with-PACKAGE-dir=<dir> OR
+      --with-PACKAGE-include=<dir> --with-PACKAGE-lib=<lib> OR --download-PACKAGE
+------------------------------------------------------------------------------------------
+Script:
+  --help
+       Print this help message  current: 1
+  --h
+       Print this help message  current: 0
+Framework:
+  --configModules
+       A list of Python modules with a Configure class  current: PETSc.Configure
+  --ignoreCompileOutput=<bool>
+       Ignore compiler output  current: 1
+  --ignoreLinkOutput=<bool>
+       Ignore linker output  current: 1
+  --ignoreWarnings=<bool>
+       Ignore compiler and linker warnings  current: 0
+  --doCleanup=<bool>
+       Delete any configure generated files (turn off for debugging)  current: 1
+  --with-alternatives=<bool>
+       Provide a choice among alternative package installations  current: 0
+  --search-dirs
+       A list of directories used to search for executables  current: ['/home/rioc/froger']
+  --package-dirs
+       A list of directories used to search for packages  current: ['/home/rioc/froger']
+  --with-external-packages-dir=<dir>
+       Location to install downloaded packages
+  --with-batch=<bool>
+       Machine using cross-compilers or a batch system to submit jobs  current: 0
+  --with-file-create-pause=<bool>
+       Add 1 sec pause between config temp file delete/recreate  current: 0
+PETSc:
+  --prefix=<dir>
+       Specifiy location to install PETSc (eg. /usr/local)  current: 
+  --with-prefetch=<bool>
+       Enable checking for prefetch instructions  current: 1
+  --with-default-arch=<bool>
+       Allow using the last configured arch without setting PETSC_ARCH  current: 1
+  --with-single-library=<bool>
+       Put all PETSc code into the single -lpetsc library  current: 1
+  --with-ios=<bool>
+       Build an iPhone/iPad version of PETSc library  current: 0
+  --with-xsdk-defaults
+       Set the following as defaults for the xSDK standard: --enable-debug=1, --enable-shared=1, --with-precision=double, --with-index-size=32, locate blas/lapack automatically  current: 0
+  --with-autoreconf=<prog>
+       Specify autoreconf  current: autoreconf
+  --PETSC_ARCH=<string>
+       The configuration name
+  --with-petsc-arch=<string>
+       The configuration name
+  --PETSC_DIR=<root-dir>
+       The root directory of the PETSc installation
+  --with-clean=<bool>
+       Delete prior build files including externalpackages  current: 0
+  --with-clanguage=<C or C++>
+       Specify C (recommended) or C++ to compile PETSc. You can use C++ in either case.  current: C
+  --with-errorchecking=<bool>
+       Specify error checking/exceptions in libraries  current: 1
+  --with-64-bit-indices=<bool>
+       Use 64 bit integers (long long) for indexing in vectors and matrices  current: 0
+  --with-log=<bool>
+       Activate logging code in PETSc  current: 1
+  --with-threadsafety=<bool>
+       Allow individual threads in PETSc to call PETSc routines  current: 0
+  --with-info=<bool>
+       Activate PetscInfo() (i.e. -info)  code in PETSc  current: 1
+  --with-ctable=<bool>
+       Activate CTABLE hashing for certain search functions - to conserve memory  current: 1
+  --with-fortran-kernels=<bool>
+       Use Fortran for linear algebra kernels  current: 0
+  --with-is-color-value-type=<char,short>
+       char, short can store 256, 65536 colors  current: short
+  --with-shared-libraries=<bool>
+       Make PETSc libraries shared -- libpetsc.so (Unix/Linux) or libpetsc.dylib (Mac)  current: 1
+  --with-serialize-functions=<bool>
+       Allows function pointers to be serialized to binary files with string representations  current: 0
+  --with-debugger=<gdb,dbx,etc>
+       Debugger to use in PETSc
+  --DATAFILESPATH=<dir>
+       Specifiy location of PETSc datafiles, e.g. test matrices
+  --with-fortran-datatypes=<bool>
+       Declare PETSc objects in Fortran like type(Vec) instead of Vec  current: 0
+  --with-fortran-interfaces=<bool>
+       Generate Fortran interface definitions for PETSc functions  current: 0
+  --with-memalign=<4,8,16,32,64>
+       Specify alignment of arrays allocated by PETSc  current: 16
+  --with-precision=<single,double,__float128>
+       Specify numerical precision  current: double
+  --with-scalar-type=<real or complex>
+       Specify real or complex numbers  current: real
+  --with-proc-filesystem=<bool>
+       Use the /proc filesystem for system statistics  current: 1
+  --known-level1-dcache-size=<int>
+       Size in bytes of Level 1 data cache
+  --known-level1-dcache-linesize=<int>
+       Size in bytes of each line of the Level 1 data cache
+  --known-level1-dcache-assoc=<int>
+       Associativity of the Level 1 data cache, 0 for full associative
+Windows:
+  --with-windows-graphics=<bool>
+       Enable check for Windows Graphics  current: 1
+Compilers:
+  --with-cpp=<prog>
+       Specify the C preprocessor
+  --CPP=<prog>
+       Specify the C preprocessor
+  --CPPFLAGS=<string>
+       Specify the C preprocessor options  current: 
+  --with-cc=<prog>
+       Specify the C compiler
+  --CC=<prog>
+       Specify the C compiler
+  --CFLAGS=<string>
+       Specify the C compiler options
+  --CC_LINKER_FLAGS=<string>
+       Specify the C linker flags  current: []
+  --CXXCPP=<prog>
+       Specify the C++ preprocessor
+  --CXXCPPFLAGS=<string>
+       Specify the C++ preprocessor options
+  --with-cxx=<prog>
+       Specify the C++ compiler
+  --CXX=<prog>
+       Specify the C++ compiler
+  --CXXFLAGS=<string>
+       Specify the C++ compiler options, also passed to linker
+  --CXX_CXXFLAGS=<string>
+       Specify the C++ compiler-only options, not passed to linker  current: 
+  --CXX_LINKER_FLAGS=<string>
+       Specify the C++ linker flags  current: []
+  --with-fc=<prog>
+       Specify the Fortran compiler
+  --FC=<prog>
+       Specify the Fortran compiler
+  --FFLAGS=<string>
+       Specify the Fortran compiler options
+  --FC_LINKER_FLAGS=<string>
+       Specify the FC linker flags  current: []
+  --with-gnu-compilers=<bool>
+       Try to use GNU compilers  current: 1
+  --with-vendor-compilers=<vendor as string>
+       Try to use vendor compilers (no argument all vendors, 0 no vendors)  current: 
+  --with-large-file-io=<bool>
+       Allow IO with files greater then 2 GB  current: 0
+  --CUDAPP=<prog>
+       Specify the CUDA preprocessor
+  --CUDAPPFLAGS=<string>
+       Specify the CUDA preprocessor options
+  --CUDAC=<prog>
+       Specify the CUDA compiler
+  --CUDAFLAGS=<string>
+       Specify the CUDA compiler options
+  --CUDAC_LINKER_FLAGS=<string>
+       Specify the CUDA linker flags  current: []
+  --with-shared-ld=<prog>
+       Specify the shared linker
+  --LD_SHARED=<prog>
+       Specify the shared linker
+  --LDFLAGS=<string>
+       Specify the linker options  current: 
+  --with-ar=<prog>
+       Specify the archiver
+  --AR=<prog>
+       Specify the archiver flags
+  --AR_FLAGS=<string>
+       Specify the archiver flags
+  --with-ranlib=<prog>
+       Specify ranlib
+  --with-pic=<bool>
+       Compile with -fPIC or equivalent flag if possible  current: 0
+  --sharedLibraryFlags=<string>
+       Specify the shared library flags  current: []
+  --dynamicLibraryFlags=<string>
+       Specify the dynamic library flags  current: []
+  --LIBS=<string>
+       Specify extra libraries for all links
+  --with-environment-variables=<bool>
+       Use compiler variables found in environment  current: 0
+  --with-clib-autodetect=<bool>
+       Autodetect C compiler libraries  current: 1
+  --with-fortranlib-autodetect=<bool>
+       Autodetect Fortran compiler libraries  current: 1
+  --with-cxxlib-autodetect=<bool>
+       Autodetect C++ compiler libraries  current: 1
+  --with-dependencies=<bool>
+       Compile with -MMD or equivalent flag if possible  current: 1
+  --with-cxx-dialect=<dialect>
+       Dialect under which to compile C++ sources (e.g., C++11)  current: 
+Compiler Flags:
+  --optionsModule=<module name>
+       The Python module used to determine compiler options and versions  current: config.compilerOptions
+  --with-debugging=<bool>
+       Specify debugging version of libraries  current: 1
+  --C_VERSION=<string>
+       The version of the C compiler  current: Unknown
+  --CXX_VERSION=<string>
+       The version of the C++ compiler  current: Unknown
+  --FC_VERSION=<string>
+       The version of the Fortran compiler  current: Unknown
+  --CUDA_VERSION=<string>
+       The version of the CUDA compiler  current: Unknown
+  --COPTFLAGS=<string>
+       Override the debugging/optimization flags for the C compiler
+  --CXXOPTFLAGS=<string>
+       Override the debugging/optimization flags for the C++ compiler
+  --FOPTFLAGS=<string>
+       Override the debugging/optimization flags for the Fortran compiler
+  --CUDAOPTFLAGS=<string>
+       Override the debugging/optimization flags for the CUDA compiler
+  --with-gcov=<bool>
+       Specify that GNUs coverage tool gcov is used  current: 0
+Types:
+  --known-endian=<big or little>
+       Are bytes stored in big or little endian?
+Visibility:
+  --with-visibility=<bool>
+       Use compiler visibility flags to limit symbol visibility  current: 0
+Functions:
+  --known-memcmp-ok=<bool>
+       Does memcmp() work correctly?
+MAKE:
+  --with-make=<bool>
+       Indicate if you wish to test for make  current: 0
+  --with-make-dir=<dir>
+       Indicate the root directory of the make installation
+  --with-make-pkg-config=<dir>
+       Look for make using pkg-config utility optional directory to look in
+  --with-make-include=<dirs>
+       Indicate the directory of the make include files
+  --with-make-lib=<libraries: e.g. [/Users/..../libmake.a,...]>
+       Indicate the make libraries
+  --download-make=<no,yes,filename>
+       Download and install make  current: no
+  --download-make-shared=<bool>
+       Install MAKE with shared libraries  current: 0
+  --with-make-np=<np>
+       Default number of threads to use for parallel builds
+  --download-make-cc=<prog>
+       C compiler for GNU make configure
+  --download-make-configure-options=<options>
+       additional options for GNU make configure
+SourceControl:
+  --with-git=<prog>
+       Specify the Git executable  current: git
+BLAS/LAPACK:
+  --with-blas-lapack-dir=<dir>
+       Indicate the directory containing BLAS and LAPACK libraries
+  --with-blas-lapack-lib=<libraries: e.g. [/Users/..../liblapack.a,libblas.a,...]>
+       Indicate the library containing BLAS and LAPACK
+  --with-blas-lib=<libraries: e.g. [/Users/..../libblas.a,...]>
+       Indicate the library(s) containing BLAS
+  --with-lapack-lib=<libraries: e.g. [/Users/..../liblapack.a,...]>
+       Indicate the library(s) containing LAPACK
+  --known-64-bit-blas-indices=<bool>
+       Indicate if using 64 bit integer BLAS  current: 0
+MPI:
+  --with-mpi=<bool>
+       Indicate if you wish to test for MPI  current: 1
+  --with-mpi-dir=<dir>
+       Indicate the root directory of the MPI installation
+  --with-mpi-pkg-config=<dir>
+       Look for MPI using pkg-config utility optional directory to look in
+  --with-mpi-include=<dirs>
+       Indicate the directory of the MPI include files
+  --with-mpi-lib=<libraries: e.g. [/Users/..../libmpi.a,...]>
+       Indicate the MPI libraries
+  --with-mpiexec=<prog>
+       The utility used to launch MPI jobs
+  --with-mpi-compilers=<bool>
+       Try to use the MPI compilers, e.g. mpicc  current: 1
+  --known-mpi-shared-libraries=<bool>
+       Indicates the MPI libraries are shared (the usual test will be skipped)
+  --with-mpiuni-fortran-binding=<bool>
+       Build the MPIUni Fortran bindings  current: 1
+  --download-mpich-pm=<hydra, gforker or mpd>
+       Launcher for MPI processes  current: hydra
+  --download-mpich-device=<ch3:nemesis or see mpich2 docs>
+       Communicator for MPI processes  current: ch3:sock
+MPICH:
+  --download-mpich=<no,yes,filename>
+       Download and install MPICH  current: no
+  --download-mpich-shared=<bool>
+       Install MPICH with shared libraries  current: 0
+OPENMPI:
+  --download-openmpi=<no,yes,filename>
+       Download and install OpenMPI  current: no
+  --download-openmpi-shared=<bool>
+       Install OPENMPI with shared libraries  current: 0
+F2CBLASLAPACK:
+  --download-f2cblaslapack=<no,yes,filename>
+       Download and install f2cblaslapack  current: no
+FBLASLAPACK:
+  --download-fblaslapack=<no,yes,filename>
+       Download and install fblaslapack  current: no
+CMAKE:
+  --with-cmake=<bool>
+       Indicate if you wish to test for cmake  current: 1
+  --with-cmake-dir=<dir>
+       Indicate the root directory of the cmake installation
+  --with-cmake-pkg-config=<dir>
+       Look for cmake using pkg-config utility optional directory to look in
+  --with-cmake-include=<dirs>
+       Indicate the directory of the cmake include files
+  --with-cmake-lib=<libraries: e.g. [/Users/..../libcmake.a,...]>
+       Indicate the cmake libraries
+  --download-cmake=<no,yes,filename>
+       Download and install cmake  current: no
+  --download-cmake-shared=<bool>
+       Install CMAKE with shared libraries  current: 0
+  --download-cmake-cc=<prog>
+       C compiler for Cmake configure
+  --download-cmake-configure-options=<options>
+       Additional options for Cmake configure
+  --with-cmake-exec=<executable>
+       CMake executable to look for
+SUNDIALS:
+  --with-sundials=<bool>
+       Indicate if you wish to test for sundials  current: 0
+  --with-sundials-dir=<dir>
+       Indicate the root directory of the sundials installation
+  --with-sundials-pkg-config=<dir>
+       Look for sundials using pkg-config utility optional directory to look in
+  --with-sundials-include=<dirs>
+       Indicate the directory of the sundials include files
+  --with-sundials-lib=<libraries: e.g. [/Users/..../libsundials.a,...]>
+       Indicate the sundials libraries
+  --download-sundials=<no,yes,filename>
+       Download and install sundials  current: no
+  --download-sundials-shared=<bool>
+       Install SUNDIALS with shared libraries  current: 0
+CHACO:
+  --with-chaco=<bool>
+       Indicate if you wish to test for Chaco  current: 0
+  --with-chaco-dir=<dir>
+       Indicate the root directory of the Chaco installation
+  --with-chaco-pkg-config=<dir>
+       Look for Chaco using pkg-config utility optional directory to look in
+  --with-chaco-include=<dirs>
+       Indicate the directory of the Chaco include files
+  --with-chaco-lib=<libraries: e.g. [/Users/..../libchaco.a,...]>
+       Indicate the Chaco libraries
+  --download-chaco=<no,yes,filename>
+       Download and install Chaco  current: no
+X:
+  --with-x=<bool>
+       Indicate if you wish to test for X  current: 1
+  --with-x-dir=<dir>
+       Indicate the root directory of the X installation
+  --with-x-pkg-config=<dir>
+       Look for X using pkg-config utility optional directory to look in
+  --with-x-include=<dirs>
+       Indicate the directory of the X include files
+  --with-x-lib=<libraries: e.g. [/Users/..../libx.a,...]>
+       Indicate the X libraries
+YAML:
+  --with-yaml=<bool>
+       Indicate if you wish to test for yaml  current: 0
+  --with-yaml-dir=<dir>
+       Indicate the root directory of the yaml installation
+  --with-yaml-pkg-config=<dir>
+       Look for yaml using pkg-config utility optional directory to look in
+  --with-yaml-include=<dirs>
+       Indicate the directory of the yaml include files
+  --with-yaml-lib=<libraries: e.g. [/Users/..../libyaml.a,...]>
+       Indicate the yaml libraries
+  --download-yaml=<no,yes,filename>
+       Download and install yaml  current: no
+  --download-yaml-shared=<bool>
+       Install YAML with shared libraries  current: 0
+SAWS:
+  --with-saws=<bool>
+       Indicate if you wish to test for saws  current: 0
+  --with-saws-dir=<dir>
+       Indicate the root directory of the saws installation
+  --with-saws-pkg-config=<dir>
+       Look for saws using pkg-config utility optional directory to look in
+  --with-saws-include=<dirs>
+       Indicate the directory of the saws include files
+  --with-saws-lib=<libraries: e.g. [/Users/..../libsaws.a,...]>
+       Indicate the saws libraries
+  --download-saws=<no,yes,filename>
+       Download and install saws  current: no
+  --download-saws-shared=<bool>
+       Install SAWS with shared libraries  current: 0
+EXODUSII:
+  --with-exodusii=<bool>
+       Indicate if you wish to test for exodusii  current: 0
+  --with-exodusii-dir=<dir>
+       Indicate the root directory of the exodusii installation
+  --with-exodusii-pkg-config=<dir>
+       Look for exodusii using pkg-config utility optional directory to look in
+  --with-exodusii-include=<dirs>
+       Indicate the directory of the exodusii include files
+  --with-exodusii-lib=<libraries: e.g. [/Users/..../libexodusii.a,...]>
+       Indicate the exodusii libraries
+  --download-exodusii=<no,yes,filename>
+       Download and install exodusii  current: no
+NETCDF:
+  --with-netcdf=<bool>
+       Indicate if you wish to test for netcdf  current: 0
+  --with-netcdf-dir=<dir>
+       Indicate the root directory of the netcdf installation
+  --with-netcdf-pkg-config=<dir>
+       Look for netcdf using pkg-config utility optional directory to look in
+  --with-netcdf-include=<dirs>
+       Indicate the directory of the netcdf include files
+  --with-netcdf-lib=<libraries: e.g. [/Users/..../libnetcdf.a,...]>
+       Indicate the netcdf libraries
+  --download-netcdf=<no,yes,filename>
+       Download and install netcdf  current: no
+  --download-netcdf-shared=<bool>
+       Install NETCDF with shared libraries  current: 0
+HDF5:
+  --with-hdf5=<bool>
+       Indicate if you wish to test for hdf5  current: 0
+  --with-hdf5-dir=<dir>
+       Indicate the root directory of the hdf5 installation
+  --with-hdf5-pkg-config=<dir>
+       Look for hdf5 using pkg-config utility optional directory to look in
+  --with-hdf5-include=<dirs>
+       Indicate the directory of the hdf5 include files
+  --with-hdf5-lib=<libraries: e.g. [/Users/..../libhdf5.a,...]>
+       Indicate the hdf5 libraries
+  --download-hdf5=<no,yes,filename>
+       Download and install hdf5  current: no
+  --download-hdf5-shared=<bool>
+       Install HDF5 with shared libraries  current: 0
+NETCDF-CXX:
+  --with-netcdf-cxx=<bool>
+       Indicate if you wish to test for netcdf-cxx  current: 0
+  --with-netcdf-cxx-dir=<dir>
+       Indicate the root directory of the netcdf-cxx installation
+  --with-netcdf-cxx-pkg-config=<dir>
+       Look for netcdf-cxx using pkg-config utility optional directory to look in
+  --with-netcdf-cxx-include=<dirs>
+       Indicate the directory of the netcdf-cxx include files
+  --with-netcdf-cxx-lib=<libraries: e.g. [/Users/..../libnetcdf-cxx.a,...]>
+       Indicate the netcdf-cxx libraries
+  --download-netcdf-cxx=<no,yes,filename>
+       Download and install netcdf-cxx  current: no
+  --download-netcdf-cxx-shared=<bool>
+       Install NETCDF-CXX with shared libraries  current: 0
+MATHEMATICA:
+  --with-mathematica=<bool>
+       Indicate if you wish to test for Mathematica  current: 0
+  --with-mathematica-dir=<dir>
+       Indicate the root directory of the Mathematica installation
+  --with-mathematica-pkg-config=<dir>
+       Look for Mathematica using pkg-config utility optional directory to look in
+  --with-mathematica-include=<dirs>
+       Indicate the directory of the Mathematica include files
+  --with-mathematica-lib=<libraries: e.g. [/Users/..../libmathematica.a,...]>
+       Indicate the Mathematica libraries
+PARMS:
+  --with-parms=<bool>
+       Indicate if you wish to test for pARMS  current: 0
+  --with-parms-dir=<dir>
+       Indicate the root directory of the pARMS installation
+  --with-parms-pkg-config=<dir>
+       Look for pARMS using pkg-config utility optional directory to look in
+  --with-parms-include=<dirs>
+       Indicate the directory of the pARMS include files
+  --with-parms-lib=<libraries: e.g. [/Users/..../libparms.a,...]>
+       Indicate the pARMS libraries
+  --download-parms=<no,yes,filename>
+       Download and install pARMS  current: no
+TRIANGLE:
+  --with-triangle=<bool>
+       Indicate if you wish to test for Triangle  current: 0
+  --with-triangle-dir=<dir>
+       Indicate the root directory of the Triangle installation
+  --with-triangle-pkg-config=<dir>
+       Look for Triangle using pkg-config utility optional directory to look in
+  --with-triangle-include=<dirs>
+       Indicate the directory of the Triangle include files
+  --with-triangle-lib=<libraries: e.g. [/Users/..../libtriangle.a,...]>
+       Indicate the Triangle libraries
+  --download-triangle=<no,yes,filename>
+       Download and install Triangle  current: no
+SOWING:
+  --with-sowing=<bool>
+       Indicate if you wish to test for sowing  current: 0
+  --with-sowing-dir=<dir>
+       Indicate the root directory of the sowing installation
+  --with-sowing-pkg-config=<dir>
+       Look for sowing using pkg-config utility optional directory to look in
+  --with-sowing-include=<dirs>
+       Indicate the directory of the sowing include files
+  --with-sowing-lib=<libraries: e.g. [/Users/..../libsowing.a,...]>
+       Indicate the sowing libraries
+  --download-sowing=<no,yes,filename>
+       Download and install sowing  current: no
+  --download-sowing-shared=<bool>
+       Install SOWING with shared libraries  current: 0
+  --download-sowing-cc=<prog>
+       C compiler for sowing configure
+  --download-sowing-cxx=<prog>
+       CXX compiler for sowing configure
+  --download-sowing-cpp=<prog>
+       CPP for sowing configure
+  --download-sowing-cxxcpp=<prog>
+       CXX CPP for sowing configure
+  --download-sowing-configure-options=<options>
+       additional options for sowing configure
+OPENMP:
+  --with-openmp=<bool>
+       Indicate if you wish to test for openmp  current: 0
+  --with-openmp-dir=<dir>
+       Indicate the root directory of the openmp installation
+  --with-openmp-pkg-config=<dir>
+       Look for openmp using pkg-config utility optional directory to look in
+  --with-openmp-include=<dirs>
+       Indicate the directory of the openmp include files
+  --with-openmp-lib=<libraries: e.g. [/Users/..../libopenmp.a,...]>
+       Indicate the openmp libraries
+NUMPY:
+  --with-numpy=<bool>
+       Indicate if you wish to test for Numpy  current: 0
+  --with-numpy-dir=<dir>
+       Indicate the root directory of the Numpy installation
+  --with-numpy-pkg-config=<dir>
+       Look for Numpy using pkg-config utility optional directory to look in
+  --with-numpy-include=<dirs>
+       Indicate the directory of the Numpy include files
+  --with-numpy-lib=<libraries: e.g. [/Users/..../libnumpy.a,...]>
+       Indicate the Numpy libraries
+  --download-numpy-shared=<bool>
+       Install NUMPY with shared libraries  current: 0
+ML:
+  --with-ml=<bool>
+       Indicate if you wish to test for ml  current: 0
+  --with-ml-dir=<dir>
+       Indicate the root directory of the ml installation
+  --with-ml-pkg-config=<dir>
+       Look for ml using pkg-config utility optional directory to look in
+  --with-ml-include=<dirs>
+       Indicate the directory of the ml include files
+  --with-ml-lib=<libraries: e.g. [/Users/..../libml.a,...]>
+       Indicate the ml libraries
+  --download-ml=<no,yes,filename>
+       Download and install ml  current: no
+  --download-ml-shared=<bool>
+       Install ML with shared libraries  current: 0
+SSL:
+  --with-ssl=<bool>
+       Indicate if you wish to test for ssl  current: 1
+  --with-ssl-dir=<dir>
+       Indicate the root directory of the ssl installation
+  --with-ssl-pkg-config=<dir>
+       Look for ssl using pkg-config utility optional directory to look in
+  --with-ssl-include=<dirs>
+       Indicate the directory of the ssl include files
+  --with-ssl-lib=<libraries: e.g. [/Users/..../libssl.a,...]>
+       Indicate the ssl libraries
+  --with-ssl-certificate=<bool>
+       Require certificate with SSL  current: 0
+HYPRE:
+  --with-hypre=<bool>
+       Indicate if you wish to test for hypre  current: 0
+  --with-hypre-dir=<dir>
+       Indicate the root directory of the hypre installation
+  --with-hypre-pkg-config=<dir>
+       Look for hypre using pkg-config utility optional directory to look in
+  --with-hypre-include=<dirs>
+       Indicate the directory of the hypre include files
+  --with-hypre-lib=<libraries: e.g. [/Users/..../libhypre.a,...]>
+       Indicate the hypre libraries
+  --download-hypre=<no,yes,filename>
+       Download and install hypre  current: no
+  --download-hypre-shared=<bool>
+       Install HYPRE with shared libraries  current: 0
+LGRIND:
+  --with-lgrind=<bool>
+       Indicate if you wish to test for lgrind  current: 0
+  --with-lgrind-dir=<dir>
+       Indicate the root directory of the lgrind installation
+  --with-lgrind-pkg-config=<dir>
+       Look for lgrind using pkg-config utility optional directory to look in
+  --with-lgrind-include=<dirs>
+       Indicate the directory of the lgrind include files
+  --with-lgrind-lib=<libraries: e.g. [/Users/..../liblgrind.a,...]>
+       Indicate the lgrind libraries
+  --download-lgrind=<no,yes,filename>
+       Download and install lgrind  current: no
+OPENGLES:
+  --with-opengles=<bool>
+       Indicate if you wish to test for opengles  current: 0
+  --with-opengles-dir=<dir>
+       Indicate the root directory of the opengles installation
+  --with-opengles-pkg-config=<dir>
+       Look for opengles using pkg-config utility optional directory to look in
+  --with-opengles-include=<dirs>
+       Indicate the directory of the opengles include files
+  --with-opengles-lib=<libraries: e.g. [/Users/..../libopengles.a,...]>
+       Indicate the opengles libraries
+VIENNACL:
+  --with-viennacl=<bool>
+       Indicate if you wish to test for viennacl  current: 0
+  --with-viennacl-dir=<dir>
+       Indicate the root directory of the viennacl installation
+  --with-viennacl-pkg-config=<dir>
+       Look for viennacl using pkg-config utility optional directory to look in
+  --with-viennacl-include=<dirs>
+       Indicate the directory of the viennacl include files
+  --with-viennacl-lib=<libraries: e.g. [/Users/..../libviennacl.a,...]>
+       Indicate the viennacl libraries
+  --download-viennacl=<no,yes,filename>
+       Download and install viennacl  current: no
+OPENCL:
+  --with-opencl=<bool>
+       Indicate if you wish to test for opencl  current: 0
+  --with-opencl-dir=<dir>
+       Indicate the root directory of the opencl installation
+  --with-opencl-pkg-config=<dir>
+       Look for opencl using pkg-config utility optional directory to look in
+  --with-opencl-include=<dirs>
+       Indicate the directory of the opencl include files
+  --with-opencl-lib=<libraries: e.g. [/Users/..../libopencl.a,...]>
+       Indicate the opencl libraries
+PTHREAD:
+  --with-pthread=<bool>
+       Indicate if you wish to test for pthread  current: 1
+  --with-pthread-dir=<dir>
+       Indicate the root directory of the pthread installation
+  --with-pthread-pkg-config=<dir>
+       Look for pthread using pkg-config utility optional directory to look in
+  --with-pthread-include=<dirs>
+       Indicate the directory of the pthread include files
+  --with-pthread-lib=<libraries: e.g. [/Users/..../libpthread.a,...]>
+       Indicate the pthread libraries
+MATLAB_ENGINE:
+  --with-matlab-engine=<bool>
+       Activate Matlab Engine (need --with-matlab also)   current: 0
+  --with-matlab-engine-dir=<dir>
+       Indicate the root directory of the MatlabEngine installation
+  --with-matlab-engine-pkg-config=<dir>
+       Look for MatlabEngine using pkg-config utility optional directory to look in
+  --with-matlab-engine-include=<dirs>
+       Indicate the directory of the MatlabEngine include files
+  --with-matlab-engine-lib=<libraries: e.g. [/Users/..../libmatlab-engine.a,...]>
+       Indicate the MatlabEngine libraries
+MATLAB:
+  --with-matlab=<bool>
+       Activate Matlab  current: 0
+  --with-matlab-engine=<bool>
+       Activate Matlab Engine (need --with-matlab also)   current: 0
+  --with-matlab-dir=<root dir>
+       Specify the root directory of the Matlab installation
+  --with-matlab-arch=<string>
+       Use Matlab Architecture (default use first-found)
+METIS:
+  --with-metis=<bool>
+       Indicate if you wish to test for metis  current: 0
+  --with-metis-dir=<dir>
+       Indicate the root directory of the metis installation
+  --with-metis-pkg-config=<dir>
+       Look for metis using pkg-config utility optional directory to look in
+  --with-metis-include=<dirs>
+       Indicate the directory of the metis include files
+  --with-metis-lib=<libraries: e.g. [/Users/..../libmetis.a,...]>
+       Indicate the metis libraries
+  --download-metis=<no,yes,filename>
+       Download and install metis  current: no
+  --download-metis-shared=<bool>
+       Install METIS with shared libraries  current: 0
+SUPERLU:
+  --with-superlu=<bool>
+       Indicate if you wish to test for SuperLU  current: 0
+  --with-superlu-dir=<dir>
+       Indicate the root directory of the SuperLU installation
+  --with-superlu-pkg-config=<dir>
+       Look for SuperLU using pkg-config utility optional directory to look in
+  --with-superlu-include=<dirs>
+       Indicate the directory of the SuperLU include files
+  --with-superlu-lib=<libraries: e.g. [/Users/..../libsuperlu.a,...]>
+       Indicate the SuperLU libraries
+  --download-superlu=<no,yes,filename>
+       Download and install SuperLU  current: no
+GLUT:
+  --with-glut=<bool>
+       Indicate if you wish to test for glut  current: 0
+  --with-glut-dir=<dir>
+       Indicate the root directory of the glut installation
+  --with-glut-pkg-config=<dir>
+       Look for glut using pkg-config utility optional directory to look in
+  --with-glut-include=<dirs>
+       Indicate the directory of the glut include files
+  --with-glut-lib=<libraries: e.g. [/Users/..../libglut.a,...]>
+       Indicate the glut libraries
+OPENGL:
+  --with-opengl=<bool>
+       Indicate if you wish to test for opengl  current: 0
+  --with-opengl-dir=<dir>
+       Indicate the root directory of the opengl installation
+  --with-opengl-pkg-config=<dir>
+       Look for opengl using pkg-config utility optional directory to look in
+  --with-opengl-include=<dirs>
+       Indicate the directory of the opengl include files
+  --with-opengl-lib=<libraries: e.g. [/Users/..../libopengl.a,...]>
+       Indicate the opengl libraries
+MOAB:
+  --with-moab=<bool>
+       Indicate if you wish to test for MOAB  current: 0
+  --with-moab-dir=<dir>
+       Indicate the root directory of the MOAB installation
+  --with-moab-pkg-config=<dir>
+       Look for MOAB using pkg-config utility optional directory to look in
+  --with-moab-include=<dirs>
+       Indicate the directory of the MOAB include files
+  --with-moab-lib=<libraries: e.g. [/Users/..../libmoab.a,...]>
+       Indicate the MOAB libraries
+  --download-moab=<no,yes,filename>
+       Download and install MOAB  current: no
+  --download-moab-shared=<bool>
+       Install MOAB with shared libraries  current: 0
+CTETGEN:
+  --with-ctetgen=<bool>
+       Indicate if you wish to test for ctetgen  current: 0
+  --with-ctetgen-dir=<dir>
+       Indicate the root directory of the ctetgen installation
+  --with-ctetgen-pkg-config=<dir>
+       Look for ctetgen using pkg-config utility optional directory to look in
+  --with-ctetgen-include=<dirs>
+       Indicate the directory of the ctetgen include files
+  --with-ctetgen-lib=<libraries: e.g. [/Users/..../libctetgen.a,...]>
+       Indicate the ctetgen libraries
+  --download-ctetgen=<no,yes,filename>
+       Download and install ctetgen  current: no
+  --download-ctetgen-shared=<bool>
+       Install CTETGEN with shared libraries  current: 0
+P4EST:
+  --with-p4est=<bool>
+       Indicate if you wish to test for p4est  current: 0
+  --with-p4est-dir=<dir>
+       Indicate the root directory of the p4est installation
+  --with-p4est-pkg-config=<dir>
+       Look for p4est using pkg-config utility optional directory to look in
+  --with-p4est-include=<dirs>
+       Indicate the directory of the p4est include files
+  --with-p4est-lib=<libraries: e.g. [/Users/..../libp4est.a,...]>
+       Indicate the p4est libraries
+  --download-p4est=<no,yes,filename>
+       Download and install p4est  current: no
+  --download-p4est-shared=<bool>
+       Install P4EST with shared libraries  current: 0
+PAMI:
+  --with-pami=<bool>
+       Indicate if you wish to test for pami  current: 0
+  --with-pami-dir=<dir>
+       Indicate the root directory of the pami installation
+  --with-pami-pkg-config=<dir>
+       Look for pami using pkg-config utility optional directory to look in
+  --with-pami-include=<dirs>
+       Indicate the directory of the pami include files
+  --with-pami-lib=<libraries: e.g. [/Users/..../libpami.a,...]>
+       Indicate the pami libraries
+MPI4PY:
+  --with-mpi4py=<bool>
+       Indicate if you wish to test for mpi4py  current: 0
+  --with-mpi4py-dir=<dir>
+       Indicate the root directory of the mpi4py installation
+  --with-mpi4py-pkg-config=<dir>
+       Look for mpi4py using pkg-config utility optional directory to look in
+  --with-mpi4py-include=<dirs>
+       Indicate the directory of the mpi4py include files
+  --with-mpi4py-lib=<libraries: e.g. [/Users/..../libmpi4py.a,...]>
+       Indicate the mpi4py libraries
+  --download-mpi4py=<no,yes,filename>
+       Download and install mpi4py  current: no
+SUPERLU_DIST:
+  --with-superlu_dist=<bool>
+       Indicate if you wish to test for SuperLU_DIST  current: 0
+  --with-superlu_dist-dir=<dir>
+       Indicate the root directory of the SuperLU_DIST installation
+  --with-superlu_dist-pkg-config=<dir>
+       Look for SuperLU_DIST using pkg-config utility optional directory to look in
+  --with-superlu_dist-include=<dirs>
+       Indicate the directory of the SuperLU_DIST include files
+  --with-superlu_dist-lib=<libraries: e.g. [/Users/..../libsuperlu_dist.a,...]>
+       Indicate the SuperLU_DIST libraries
+  --download-superlu_dist=<no,yes,filename>
+       Download and install SuperLU_DIST  current: no
+  --download-superlu_dist-gpu=<bool>
+       Install Superlu_DIST to use GPUs  current: 0
+PARMETIS:
+  --with-parmetis=<bool>
+       Indicate if you wish to test for parmetis  current: 0
+  --with-parmetis-dir=<dir>
+       Indicate the root directory of the parmetis installation
+  --with-parmetis-pkg-config=<dir>
+       Look for parmetis using pkg-config utility optional directory to look in
+  --with-parmetis-include=<dirs>
+       Indicate the directory of the parmetis include files
+  --with-parmetis-lib=<libraries: e.g. [/Users/..../libparmetis.a,...]>
+       Indicate the parmetis libraries
+  --download-parmetis=<no,yes,filename>
+       Download and install parmetis  current: no
+  --download-parmetis-shared=<bool>
+       Install PARMETIS with shared libraries  current: 0
+TETGEN:
+  --with-tetgen=<bool>
+       Indicate if you wish to test for tetgen  current: 0
+  --with-tetgen-dir=<dir>
+       Indicate the root directory of the tetgen installation
+  --with-tetgen-pkg-config=<dir>
+       Look for tetgen using pkg-config utility optional directory to look in
+  --with-tetgen-include=<dirs>
+       Indicate the directory of the tetgen include files
+  --with-tetgen-lib=<libraries: e.g. [/Users/..../libtetgen.a,...]>
+       Indicate the tetgen libraries
+  --download-tetgen=<no,yes,filename>
+       Download and install tetgen  current: no
+TCHEM:
+  --with-tchem=<bool>
+       Indicate if you wish to test for tchem  current: 0
+  --with-tchem-dir=<dir>
+       Indicate the root directory of the tchem installation
+  --with-tchem-pkg-config=<dir>
+       Look for tchem using pkg-config utility optional directory to look in
+  --with-tchem-include=<dirs>
+       Indicate the directory of the tchem include files
+  --with-tchem-lib=<libraries: e.g. [/Users/..../libtchem.a,...]>
+       Indicate the tchem libraries
+  --download-tchem=<no,yes,filename>
+       Download and install tchem  current: no
+PTSCOTCH:
+  --with-ptscotch=<bool>
+       Indicate if you wish to test for PTScotch  current: 0
+  --with-ptscotch-dir=<dir>
+       Indicate the root directory of the PTScotch installation
+  --with-ptscotch-pkg-config=<dir>
+       Look for PTScotch using pkg-config utility optional directory to look in
+  --with-ptscotch-include=<dirs>
+       Indicate the directory of the PTScotch include files
+  --with-ptscotch-lib=<libraries: e.g. [/Users/..../libptscotch.a,...]>
+       Indicate the PTScotch libraries
+  --download-ptscotch=<no,yes,filename>
+       Download and install PTScotch  current: no
+HWLOC:
+  --with-hwloc=<bool>
+       Indicate if you wish to test for hwloc  current: 1
+  --with-hwloc-dir=<dir>
+       Indicate the root directory of the hwloc installation
+  --with-hwloc-pkg-config=<dir>
+       Look for hwloc using pkg-config utility optional directory to look in
+  --with-hwloc-include=<dirs>
+       Indicate the directory of the hwloc include files
+  --with-hwloc-lib=<libraries: e.g. [/Users/..../libhwloc.a,...]>
+       Indicate the hwloc libraries
+  --download-hwloc=<no,yes,filename>
+       Download and install hwloc  current: no
+  --download-hwloc-shared=<bool>
+       Install HWLOC with shared libraries  current: 0
+CUDA:
+  --with-cuda=<bool>
+       Indicate if you wish to test for cuda  current: 0
+  --with-cuda-dir=<dir>
+       Indicate the root directory of the cuda installation
+  --with-cuda-pkg-config=<dir>
+       Look for cuda using pkg-config utility optional directory to look in
+  --with-cuda-include=<dirs>
+       Indicate the directory of the cuda include files
+  --with-cuda-lib=<libraries: e.g. [/Users/..../libcuda.a,...]>
+       Indicate the cuda libraries
+  --with-cuda-arch=<arch>
+       Target architecture for nvcc, e.g. sm_20
+VALGRIND:
+  --with-valgrind=<bool>
+       Indicate if you wish to test for valgrind  current: 1
+  --with-valgrind-dir=<dir>
+       Indicate the root directory of the valgrind installation
+  --with-valgrind-pkg-config=<dir>
+       Look for valgrind using pkg-config utility optional directory to look in
+  --with-valgrind-include=<dirs>
+       Indicate the directory of the valgrind include files
+  --with-valgrind-lib=<libraries: e.g. [/Users/..../libvalgrind.a,...]>
+       Indicate the valgrind libraries
+FIAT:
+  --with-fiat=<bool>
+       Indicate if you wish to test for fiat  current: 0
+  --with-fiat-dir=<dir>
+       Indicate the root directory of the fiat installation
+  --with-fiat-pkg-config=<dir>
+       Look for fiat using pkg-config utility optional directory to look in
+  --with-fiat-include=<dirs>
+       Indicate the directory of the fiat include files
+  --with-fiat-lib=<libraries: e.g. [/Users/..../libfiat.a,...]>
+       Indicate the fiat libraries
+  --download-fiat=<no,yes,filename>
+       Download and install fiat  current: no
+SCIENTIFICPYTHON:
+  --with-scientificpython=<bool>
+       Indicate if you wish to test for scientificpython  current: 0
+  --with-scientificpython-dir=<dir>
+       Indicate the root directory of the scientificpython installation
+  --with-scientificpython-pkg-config=<dir>
+       Look for scientificpython using pkg-config utility optional directory to look in
+  --with-scientificpython-include=<dirs>
+       Indicate the directory of the scientificpython include files
+  --with-scientificpython-lib=<libraries: e.g. [/Users/..../libscientificpython.a,...]>
+       Indicate the scientificpython libraries
+  --download-scientificpython=<no,yes,filename>
+       Download and install scientificpython  current: no
+CUSP:
+  --with-cusp=<bool>
+       Indicate if you wish to test for cusp  current: 0
+  --with-cusp-dir=<dir>
+       Indicate the root directory of the cusp installation
+  --with-cusp-pkg-config=<dir>
+       Look for cusp using pkg-config utility optional directory to look in
+  --with-cusp-include=<dirs>
+       Indicate the directory of the cusp include files
+  --with-cusp-lib=<libraries: e.g. [/Users/..../libcusp.a,...]>
+       Indicate the cusp libraries
+  --download-cusp=<no,yes,filename>
+       Download and install cusp  current: no
+AFTERIMAGE:
+  --with-afterimage=<bool>
+       Indicate if you wish to test for afterimage  current: 0
+  --with-afterimage-dir=<dir>
+       Indicate the root directory of the afterimage installation
+  --with-afterimage-pkg-config=<dir>
+       Look for afterimage using pkg-config utility optional directory to look in
+  --with-afterimage-include=<dirs>
+       Indicate the directory of the afterimage include files
+  --with-afterimage-lib=<libraries: e.g. [/Users/..../libafterimage.a,...]>
+       Indicate the afterimage libraries
+CGNS:
+  --with-cgns=<bool>
+       Indicate if you wish to test for cgns  current: 0
+  --with-cgns-dir=<dir>
+       Indicate the root directory of the cgns installation
+  --with-cgns-pkg-config=<dir>
+       Look for cgns using pkg-config utility optional directory to look in
+  --with-cgns-include=<dirs>
+       Indicate the directory of the cgns include files
+  --with-cgns-lib=<libraries: e.g. [/Users/..../libcgns.a,...]>
+       Indicate the cgns libraries
+SUPERLU_MT:
+  --with-superlu_mt=<bool>
+       Indicate if you wish to test for SuperLU_MT  current: 0
+  --with-superlu_mt-dir=<dir>
+       Indicate the root directory of the SuperLU_MT installation
+  --with-superlu_mt-pkg-config=<dir>
+       Look for SuperLU_MT using pkg-config utility optional directory to look in
+  --with-superlu_mt-include=<dirs>
+       Indicate the directory of the SuperLU_MT include files
+  --with-superlu_mt-lib=<libraries: e.g. [/Users/..../libsuperlu_mt.a,...]>
+       Indicate the SuperLU_MT libraries
+  --download-superlu_mt=<no,yes,filename>
+       Download and install SuperLU_MT  current: no
+CHOMBO:
+  --with-chombo=<bool>
+       Indicate if you wish to test for Chombo  current: 0
+  --with-chombo-dir=<dir>
+       Indicate the root directory of the Chombo installation
+  --with-chombo-pkg-config=<dir>
+       Look for Chombo using pkg-config utility optional directory to look in
+  --with-chombo-include=<dirs>
+       Indicate the directory of the Chombo include files
+  --with-chombo-lib=<libraries: e.g. [/Users/..../libchombo.a,...]>
+       Indicate the Chombo libraries
+  --download-chombo=<no,yes,filename>
+       Download and install Chombo  current: no
+  --download-chombo-dimension=<1,2,3>
+       Install Chombo to work in this space dimension  current: 2
+SPRNG:
+  --with-sprng=<bool>
+       Indicate if you wish to test for sprng  current: 0
+  --with-sprng-dir=<dir>
+       Indicate the root directory of the sprng installation
+  --with-sprng-pkg-config=<dir>
+       Look for sprng using pkg-config utility optional directory to look in
+  --with-sprng-include=<dirs>
+       Indicate the directory of the sprng include files
+  --with-sprng-lib=<libraries: e.g. [/Users/..../libsprng.a,...]>
+       Indicate the sprng libraries
+  --download-sprng=<no,yes,filename>
+       Download and install sprng  current: no
+FFTW:
+  --with-fftw=<bool>
+       Indicate if you wish to test for fftw  current: 0
+  --with-fftw-dir=<dir>
+       Indicate the root directory of the fftw installation
+  --with-fftw-pkg-config=<dir>
+       Look for fftw using pkg-config utility optional directory to look in
+  --with-fftw-include=<dirs>
+       Indicate the directory of the fftw include files
+  --with-fftw-lib=<libraries: e.g. [/Users/..../libfftw.a,...]>
+       Indicate the fftw libraries
+  --download-fftw=<no,yes,filename>
+       Download and install fftw  current: no
+  --download-fftw-shared=<bool>
+       Install FFTW with shared libraries  current: 0
+PARTY:
+  --with-party=<bool>
+       Indicate if you wish to test for PARTY  current: 0
+  --with-party-dir=<dir>
+       Indicate the root directory of the PARTY installation
+  --with-party-pkg-config=<dir>
+       Look for PARTY using pkg-config utility optional directory to look in
+  --with-party-include=<dirs>
+       Indicate the directory of the PARTY include files
+  --with-party-lib=<libraries: e.g. [/Users/..../libparty.a,...]>
+       Indicate the PARTY libraries
+  --download-party=<no,yes,filename>
+       Download and install PARTY  current: no
+MPE:
+  --with-mpe=<bool>
+       Indicate if you wish to test for mpe  current: 0
+  --with-mpe-dir=<dir>
+       Indicate the root directory of the mpe installation
+  --with-mpe-pkg-config=<dir>
+       Look for mpe using pkg-config utility optional directory to look in
+  --with-mpe-include=<dirs>
+       Indicate the directory of the mpe include files
+  --with-mpe-lib=<libraries: e.g. [/Users/..../libmpe.a,...]>
+       Indicate the mpe libraries
+  --download-mpe=<no,yes,filename>
+       Download and install mpe  current: no
+  --download-mpe-shared=<bool>
+       Install MPE with shared libraries  current: 0
+PETSC4PY:
+  --download-petsc4py=<no,yes,filename>
+       Download and install petsc4py  current: no
+MUMPS:
+  --with-mumps=<bool>
+       Indicate if you wish to test for MUMPS  current: 0
+  --with-mumps-dir=<dir>
+       Indicate the root directory of the MUMPS installation
+  --with-mumps-pkg-config=<dir>
+       Look for MUMPS using pkg-config utility optional directory to look in
+  --with-mumps-include=<dirs>
+       Indicate the directory of the MUMPS include files
+  --with-mumps-lib=<libraries: e.g. [/Users/..../libmumps.a,...]>
+       Indicate the MUMPS libraries
+  --download-mumps=<no,yes,filename>
+       Download and install MUMPS  current: no
+  --with-mumps-serial
+       Use serial build of MUMPS  current: 0
+SCALAPACK:
+  --with-scalapack=<bool>
+       Indicate if you wish to test for scalapack  current: 0
+  --with-scalapack-dir=<dir>
+       Indicate the root directory of the scalapack installation
+  --with-scalapack-pkg-config=<dir>
+       Look for scalapack using pkg-config utility optional directory to look in
+  --with-scalapack-include=<dirs>
+       Indicate the directory of the scalapack include files
+  --with-scalapack-lib=<libraries: e.g. [/Users/..../libscalapack.a,...]>
+       Indicate the scalapack libraries
+  --download-scalapack=<no,yes,filename>
+       Download and install scalapack  current: no
+MKL_PARDISO:
+  --with-mkl_pardiso=<bool>
+       Indicate if you wish to test for mkl_pardiso  current: 0
+  --with-mkl_pardiso-dir=<dir>
+       Indicate the root directory of the mkl_pardiso installation
+  --with-mkl_pardiso-pkg-config=<dir>
+       Look for mkl_pardiso using pkg-config utility optional directory to look in
+  --with-mkl_pardiso-include=<dirs>
+       Indicate the directory of the mkl_pardiso include files
+  --with-mkl_pardiso-lib=<libraries: e.g. [/Users/..../libmkl_pardiso.a,...]>
+       Indicate the mkl_pardiso libraries
+TRILINOS:
+  --with-trilinos=<bool>
+       Indicate if you wish to test for Trilinos  current: 0
+  --with-trilinos-dir=<dir>
+       Indicate the root directory of the Trilinos installation
+  --with-trilinos-pkg-config=<dir>
+       Look for Trilinos using pkg-config utility optional directory to look in
+  --with-trilinos-include=<dirs>
+       Indicate the directory of the Trilinos include files
+  --with-trilinos-lib=<libraries: e.g. [/Users/..../libtrilinos.a,...]>
+       Indicate the Trilinos libraries
+  --download-trilinos=<no,yes,filename>
+       Download and install Trilinos  current: no
+  --download-trilinos-shared=<bool>
+       Install TRILINOS with shared libraries  current: 0
+BOOST:
+  --with-boost=<bool>
+       Indicate if you wish to test for boost  current: 0
+  --with-boost-dir=<dir>
+       Indicate the root directory of the boost installation
+  --with-boost-pkg-config=<dir>
+       Look for boost using pkg-config utility optional directory to look in
+  --with-boost-include=<dirs>
+       Indicate the directory of the boost include files
+  --with-boost-lib=<libraries: e.g. [/Users/..../libboost.a,...]>
+       Indicate the boost libraries
+  --download-boost=<no,yes,filename>
+       Download and install boost  current: no
+PASTIX:
+  --with-pastix=<bool>
+       Indicate if you wish to test for PaStiX  current: 0
+  --with-pastix-dir=<dir>
+       Indicate the root directory of the PaStiX installation
+  --with-pastix-pkg-config=<dir>
+       Look for PaStiX using pkg-config utility optional directory to look in
+  --with-pastix-include=<dirs>
+       Indicate the directory of the PaStiX include files
+  --with-pastix-lib=<libraries: e.g. [/Users/..../libpastix.a,...]>
+       Indicate the PaStiX libraries
+  --download-pastix=<no,yes,filename>
+       Download and install PaStiX  current: no
+PAPI:
+  --with-papi=<bool>
+       Indicate if you wish to test for papi  current: 0
+  --with-papi-dir=<dir>
+       Indicate the root directory of the papi installation
+  --with-papi-pkg-config=<dir>
+       Look for papi using pkg-config utility optional directory to look in
+  --with-papi-include=<dirs>
+       Indicate the directory of the papi include files
+  --with-papi-lib=<libraries: e.g. [/Users/..../libpapi.a,...]>
+       Indicate the papi libraries
+SPAI:
+  --with-spai=<bool>
+       Indicate if you wish to test for spai  current: 0
+  --with-spai-dir=<dir>
+       Indicate the root directory of the spai installation
+  --with-spai-pkg-config=<dir>
+       Look for spai using pkg-config utility optional directory to look in
+  --with-spai-include=<dirs>
+       Indicate the directory of the spai include files
+  --with-spai-lib=<libraries: e.g. [/Users/..../libspai.a,...]>
+       Indicate the spai libraries
+  --download-spai=<no,yes,filename>
+       Download and install spai  current: no
+MKL_CPARDISO:
+  --with-mkl_cpardiso=<bool>
+       Indicate if you wish to test for mkl_cpardiso  current: 0
+  --with-mkl_cpardiso-dir=<dir>
+       Indicate the root directory of the mkl_cpardiso installation
+  --with-mkl_cpardiso-pkg-config=<dir>
+       Look for mkl_cpardiso using pkg-config utility optional directory to look in
+  --with-mkl_cpardiso-include=<dirs>
+       Indicate the directory of the mkl_cpardiso include files
+  --with-mkl_cpardiso-lib=<libraries: e.g. [/Users/..../libmkl_cpardiso.a,...]>
+       Indicate the mkl_cpardiso libraries
+C2HTML:
+  --with-c2html=<bool>
+       Indicate if you wish to test for c2html  current: 1
+  --with-c2html-dir=<dir>
+       Indicate the root directory of the c2html installation
+  --with-c2html-pkg-config=<dir>
+       Look for c2html using pkg-config utility optional directory to look in
+  --with-c2html-include=<dirs>
+       Indicate the directory of the c2html include files
+  --with-c2html-lib=<libraries: e.g. [/Users/..../libc2html.a,...]>
+       Indicate the c2html libraries
+  --download-c2html=<no,yes,filename>
+       Download and install c2html  current: no
+  --download-c2html-shared=<bool>
+       Install C2HTML with shared libraries  current: 0
+  --download-c2html-cc=<prog>
+       C compiler for c2html
+  --download-c2html-configure-options=<options>
+       additional options for c2html
+  --with-c2html-exec=<executable>
+       C2html executable to look for
+ELEMENTAL:
+  --with-elemental=<bool>
+       Indicate if you wish to test for elemental  current: 0
+  --with-elemental-dir=<dir>
+       Indicate the root directory of the elemental installation
+  --with-elemental-pkg-config=<dir>
+       Look for elemental using pkg-config utility optional directory to look in
+  --with-elemental-include=<dirs>
+       Indicate the directory of the elemental include files
+  --with-elemental-lib=<libraries: e.g. [/Users/..../libelemental.a,...]>
+       Indicate the elemental libraries
+  --download-elemental=<no,yes,filename>
+       Download and install elemental  current: no
+  --download-elemental-shared=<bool>
+       Install ELEMENTAL with shared libraries  current: 0
+ZOLTAN:
+  --with-zoltan=<bool>
+       Indicate if you wish to test for Zoltan  current: 0
+  --with-zoltan-dir=<dir>
+       Indicate the root directory of the Zoltan installation
+  --with-zoltan-pkg-config=<dir>
+       Look for Zoltan using pkg-config utility optional directory to look in
+  --with-zoltan-include=<dirs>
+       Indicate the directory of the Zoltan include files
+  --with-zoltan-lib=<libraries: e.g. [/Users/..../libzoltan.a,...]>
+       Indicate the Zoltan libraries
+  --download-zoltan=<no,yes,filename>
+       Download and install Zoltan  current: no
+  --download-zoltan-shared=<bool>
+       Install ZOLTAN with shared libraries  current: 0
+SUITESPARSE:
+  --with-suitesparse=<bool>
+       Indicate if you wish to test for SuiteSparse  current: 0
+  --with-suitesparse-dir=<dir>
+       Indicate the root directory of the SuiteSparse installation
+  --with-suitesparse-pkg-config=<dir>
+       Look for SuiteSparse using pkg-config utility optional directory to look in
+  --with-suitesparse-include=<dirs>
+       Indicate the directory of the SuiteSparse include files
+  --with-suitesparse-lib=<libraries: e.g. [/Users/..../libsuitesparse.a,...]>
+       Indicate the SuiteSparse libraries
+  --download-suitesparse=<no,yes,filename>
+       Download and install SuiteSparse  current: no
+  --download-suitesparse-gpu=<bool>
+       Install SuiteSparse to use GPUs  current: 0

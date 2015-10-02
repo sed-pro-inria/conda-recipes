@@ -1,0 +1,40 @@
+package:
+  name: petsc
+  version: 3.6.0
+
+source:
+  fn: petsc-lite-3.6.0.tar.gz
+  url: http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.6.0.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - gcc
+    - python 2.7*
+    - cmake
+    - openmpi
+    - metis-gkrand
+    - parmetis
+    - scalapack
+    - mumps
+    - superlu_dist ==4.0
+    - suitesparse
+    - openblas
+  run:
+    - libgcc
+    - openmpi
+    - metis-gkrand
+    - parmetis
+    - scalapack
+    - mumps
+    - superlu_dist ==4.0
+    - suitesparse
+    - openblas
+
+about:
+  home: http://www.mcs.anl.gov/petsc/
+  license: BSD
+  summary: 'PETSc: Portable, Extensible Toolkit for Scientific Computation'
