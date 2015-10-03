@@ -1,0 +1,22 @@
+package:
+  name: lm5
+  version: 5.3
+
+source:
+  fn: lm5.zip
+  url: http://www-roc.inria.fr/gamma/Loic.Marechal/Downloads/lm5.zip
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - gcc
+  run:
+    - libgcc
+
+about:
+  home: https://www.rocq.inria.fr/gamma/gamma/Membres/CIPD/Loic.Marechal/Research/LM6.html
+  license: LGPL
+  summary: 'Reads and writes mesh files (.mesh) or physical solution files (.sol)'
