@@ -1,0 +1,17 @@
+package:
+  name: getpot
+  version: 1.1.18
+
+source:
+
+  fn: getpot-c++-1.1.18.tar.gz
+  url: http://sourceforge.net/projects/getpot/files/GetPot%20C%2B%2B/1.1.18/getpot-c%2B%2B-1.1.18.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+about:
+  home: http://getpot.sourceforge.net/
+  summary: Powerful Input File and Command Line Parser
+  license: GNU LGPL
