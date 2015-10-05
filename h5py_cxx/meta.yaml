@@ -1,0 +1,32 @@
+package:
+  name: h5py_cxx
+  version: 2.5.0
+
+source:
+  fn: h5py-2.5.0.tar.gz 
+  url: https://pypi.python.org/packages/source/h/h5py/h5py-2.5.0.tar.gz
+  md5: 6e4301b5ad5da0d51b0a1e5ac19e3b74
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cython
+    - setuptools
+    - pkgconfig
+    - python
+    - numpy
+    - hdf5_cxx
+    - six
+  run:
+    - python
+    - numpy
+    - hdf5_cxx
+    - unittest2    [py26]
+    - six
+
+about:
+  home: http://www.h5py.org/
+  license: New BSD (http://opensource.org/licenses/bsd-license.php)
+  summary: The h5py package is a Pythonic interface to the HDF5 binary data format.
