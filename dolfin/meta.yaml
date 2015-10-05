@@ -1,0 +1,44 @@
+package:
+  name: dolfin
+  version: 1.5.0
+
+source:
+  fn: dolfin-1.5.0.tar.gz
+  url: https://bitbucket.org/fenics-project/dolfin/downloads/dolfin-1.5.0.tar.gz
+  md5: 071a4a2ca3c2fc00657bd09457ebed54
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+    - python
+    - openmpi
+    - boost
+    - qt
+    - numpy
+    - vtk
+    - eigen3
+    - ffc ==1.5.0
+    - ply
+
+  run:
+    - python
+    - openmpi
+    - boost
+    - qt
+    - numpy
+    - vtk
+    - eigen3
+    - ffc ==1.5.0
+    - ply
+
+test:
+  imports:
+    - dolfin
+
+about:
+  home: http://www.fenicsproject.org
+  license: The GNU Lesser General Public License, version 3.0
+  summary: 'C++/Python library for solving differential equations'
