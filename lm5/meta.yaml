@@ -7,14 +7,12 @@ source:
   url: http://www-roc.inria.fr/gamma/Loic.Marechal/Downloads/lm5.zip
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
   build:
-    - gcc
   run:
-    - libgcc
 
 about:
   home: https://www.rocq.inria.fr/gamma/gamma/Membres/CIPD/Loic.Marechal/Research/LM6.html

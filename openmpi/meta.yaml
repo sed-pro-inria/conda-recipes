@@ -8,15 +8,13 @@ source:
   md5: eb569e7dc97eeaa5b1876cccf114f377
 
 build:
-  number: 1
+  number: 2
   binary_relocation: true
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
-    - gcc
   run:
-    - libgcc
 
 about:
   home: http://www.open-mpi.org/

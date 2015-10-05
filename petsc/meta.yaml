@@ -7,14 +7,14 @@ source:
   url: http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.6.0.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
   build:
-    - gcc
     - python 2.7*
     - cmake
+    - openblas
     - openmpi
     - metis-gkrand
     - parmetis
@@ -22,9 +22,8 @@ requirements:
     - mumps
     - superlu_dist ==4.0
     - suitesparse
-    - openblas
   run:
-    - libgcc
+    - openblas
     - openmpi
     - metis-gkrand
     - parmetis
@@ -32,7 +31,6 @@ requirements:
     - mumps
     - superlu_dist ==4.0
     - suitesparse
-    - openblas
 
 about:
   home: http://www.mcs.anl.gov/petsc/

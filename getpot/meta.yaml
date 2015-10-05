@@ -8,7 +8,7 @@ source:
   url: http://sourceforge.net/projects/getpot/files/GetPot%20C%2B%2B/1.1.18/getpot-c%2B%2B-1.1.18.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 about:

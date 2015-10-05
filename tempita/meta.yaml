@@ -7,6 +7,9 @@ source:
   url: https://pypi.python.org/packages/source/T/Tempita/Tempita-0.5.3dev.tar.gz
   md5: 365c3b4f36435e2178902d5619301140
 
+build:
+  number: 1
+
 requirements:
   build:
     - python

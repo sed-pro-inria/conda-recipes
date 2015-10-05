@@ -7,18 +7,16 @@ source:
   url: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_dist_4.0.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
   build:
-    - gcc
     - openblas
     - openmpi
     - metis-gkrand
     - parmetis
   run:
-    - libgcc
     - openblas
     - openmpi
     - metis-gkrand

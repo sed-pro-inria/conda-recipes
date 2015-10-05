@@ -1,0 +1,26 @@
+package:
+  name: h5utils_cxx
+  version: 1.8.15.1
+
+source:
+  fn: h5utils-1.12.1.tar.gz
+  url: http://ab-initio.mit.edu/h5utils/h5utils-1.12.1.tar.gz
+  patches: 
+    # See http://anonscm.debian.org/viewvc/pkg-grass/packages/h5utils/trunk/debian/patches/png1.5?view=log
+    - fix_dereferencing_pointer_to_incomplete_type.patch
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - hdf5_cxx
+    - libpng
+  run:
+    - hdf5_cxx
+    - libpng
+
+about:
+  home: http://ab-initio.mit.edu/wiki/index.php/H5utils
+  license: Massachusetts Institute of Technology.
+  summary: h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 

@@ -7,15 +7,13 @@ source:
   url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.4.4.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
   build:
-    - gcc
     - openblas
   run:
-    - libgcc
     - openblas
 
 about:

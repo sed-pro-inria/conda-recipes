@@ -7,18 +7,16 @@ source:
   url: http://mumps.enseeiht.fr/MUMPS_4.10.0.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
   build:
-    - gcc
     - openblas
     - openmpi
     - scalapack
     - parmetis
   run:
-    - libgcc
     - openblas
     - openmpi
     - scalapack

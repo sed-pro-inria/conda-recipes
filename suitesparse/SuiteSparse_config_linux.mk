@@ -119,7 +119,7 @@ INSTALL_INCLUDE = ${CONDADIR}/include
 # naming the BLAS and LAPACK library (*.a or *.so) files.
 
 # This is probably slow ... it might connect to the Standard Reference BLAS:
-  BLAS = -L{CONDADIR} -lopenblas -lpthread -lgfortran
+  BLAS = -L${CONDADIR}/lib -lopenblas -lpthread -lgfortran
   LAPACK = 
 
 # MKL 
