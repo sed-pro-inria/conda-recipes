@@ -1,0 +1,31 @@
+package:
+  name: petsc4py
+  version: 3.6.0
+
+source:
+  fn: petsc4py-3.6.0.tar.gz
+  url: https://bitbucket.org/petsc/petsc4py/downloads/petsc4py-3.6.0.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - numpy
+    - petsc ==3.6.0
+
+  run:
+    - python
+    - numpy
+    - petsc ==3.6.0
+
+test:
+  imports:
+    - petsc4py
+    - petsc4py.lib
+
+about:
+  home: https://bitbucket.org/petsc/petsc4py/
+  license: BSD License
+  summary: 'PETSc for Python'
