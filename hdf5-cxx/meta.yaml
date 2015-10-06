@@ -1,5 +1,5 @@
 package:
-  name: hdf5_cxx
+  name: hdf5-cxx
   version: 1.8.15.1
 
 source:

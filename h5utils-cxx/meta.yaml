@@ -1,5 +1,5 @@
 package:
-  name: h5utils_cxx
+  name: h5utils-cxx
   version: 1.8.15.1
 
 source:
@@ -14,10 +14,10 @@ build:
 
 requirements:
   build:
-    - hdf5_cxx
+    - hdf5-cxx
     - libpng
   run:
-    - hdf5_cxx
+    - hdf5-cxx
     - libpng
 
 about:

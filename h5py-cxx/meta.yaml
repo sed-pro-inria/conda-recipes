@@ -1,5 +1,5 @@
 package:
-  name: h5py_cxx
+  name: h5py-cxx
   version: 2.5.0
 
 source:
@@ -17,12 +17,12 @@ requirements:
     - pkgconfig
     - python
     - numpy
-    - hdf5_cxx
+    - hdf5-cxx
     - six
   run:
     - python
     - numpy
-    - hdf5_cxx
+    - hdf5-cxx
     - unittest2    [py26]
     - six
 
