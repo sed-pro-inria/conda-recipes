@@ -32,6 +32,10 @@ The file `SuperLU_DIST_4.0/README` says:
     This "alpha" release contains double-precision real and double-precision
     complex data types.
 
+Warning: if building `superlu_dist` with 64 bits integer using `-D_LONGINT`,
+code that include `superlu_dist` header must be compiled with `-D_LONGINT` in
+order to then link the library.
+
 ## `mumps`
 
 The library is build for the four flaoting point arithmetics: s, c, d, z.
