@@ -68,8 +68,8 @@ RANLIB       	= ranlib
 CC           	= mpicc
 # CFLAGS should be set to be the C flags that include optimization
 CFLAGS          = ${CUDA_FLAGS} ${INCS} -std=c99 -O3 -fPIC \
-		-DDEBUGlevel=0 -DPRNTlevel=1 -DPROFlevel=0 \
- 		-D_LONGINT 
+		-DDEBUGlevel=0 -DPRNTlevel=1 -DPROFlevel=0
+#		-D_LONGINT 
 #	-Wunused-variable 
 #
 # NOOPTS should be set to be the C flags that turn off any optimization
