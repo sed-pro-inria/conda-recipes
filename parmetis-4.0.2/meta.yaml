@@ -1,10 +1,10 @@
 package:
   name: parmetis
-  version: 4.0.3
+  version: 4.0.2p5
 
 source:
-  fn: parmetis-4.0.3.tar.gz
-  url: http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis/parmetis-4.0.3.tar.gz
+  fn: parmetis-4.0.2-p5.tar.gz
+  url: http://ftp.mcs.anl.gov/pub/petsc/externalpackages/parmetis-4.0.2-p5.tar.gz
 
 build:
   number: 0
@@ -13,10 +13,11 @@ build:
 requirements:
   build:
     - cmake
-    - openmpi
+    - openmpi 1.8*
+    - metis 5.0*
   run:
-    - openmpi
-    - metis-gkrand # metis.h is required
+    - openmpi 1.8*
+    - metis 5.0*
 
 about:
   home: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview

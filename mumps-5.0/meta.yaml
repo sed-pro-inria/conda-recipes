@@ -1,0 +1,26 @@
+package:
+  name: mumps
+  version: 5.0.0p1
+
+source:
+  fn: MUMPS_5.0.0-p1.tar.gz
+  url: http://ftp.mcs.anl.gov/pub/petsc/externalpackages/MUMPS_5.0.0-p1.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - openblas
+    - scalapack 2.0*
+    - parmetis 4.0*
+  run:
+    - openblas
+    - scalapack 2.0*
+    - parmetis 4.0*
+
+about:
+  home: http://mumps.enseeiht.fr/
+  license: Public domain
+  summary: A parallel sparse direct solver

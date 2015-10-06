@@ -1,0 +1,24 @@
+package:
+  name: superlu_dist
+  version: 4.1
+
+source:
+  fn: superlu_dist_4.1.tar.gz
+  url: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_dist_4.1.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - openblas
+    - parmetis 4.0.3
+  run:
+    - openblas
+    - parmetis 4.0.3
+
+about:
+  home: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/
+  license: University of California
+  summary: SuperLU is a general purpose library for the direct solution of large, sparse, nonsymmetric systems of linear equations on high performance machines.

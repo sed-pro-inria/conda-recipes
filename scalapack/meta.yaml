@@ -12,11 +12,11 @@ build:
 
 requirements:
   build:
-    - openmpi
     - openblas
+    - openmpi 1.8*
   run:
-    - openmpi
     - openblas
+    - openmpi 1.8*
 
 about:
   home: http://www.netlib.org/scalapack/

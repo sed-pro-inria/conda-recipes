@@ -16,23 +16,24 @@
 ############################################################################
 #
 #  The machine (platform) identifier to append to the library names
-# Carver: Intel compiler
+#
+## edison at NERSC
 PLAT		= _linux-64 
 
 #
 #  The name of the libraries to be created/linked to
 #
 DSuperLUroot 	= ${CONDADIR}
-DSUPERLULIB   	= $(DSuperLUroot)/lib/libsuperlu_dist_4.0.a
+DSUPERLULIB   	= $(DSuperLUroot)/lib/libsuperlu_dist_4.1.a
 #
 BLASDEF	     	= -DUSE_VENDOR_BLAS
-BLASLIB	        = -L{CONDADIR}/lib -lopenblas -lpthread
+BLASLIB	        = -L${CONDADIR}/lib -lopenblas -lpthread
 #
 ############################################################################
 ## parmetis 4.x.x, 32-bit integer
-# PARMETIS_DIR	:= ${HOME}/Carver/lib/parmetis-4.0.3
-## parmetis 4.x.x, 64-bit integer
 PARMETIS_DIR	:= ${CONDADIR}
+## parmetis 4.x.x, 64-bit integer
+# PARMETIS_DIR	:= ${HOME}/Edison/lib/parmetis-4.0.3_64
 
 METISLIB := -L${PARMETIS_DIR}/lib -lmetis
 PARMETISLIB := -L${PARMETIS_DIR}/lib -lparmetis
@@ -40,19 +41,11 @@ I_PARMETIS := -I${PARMETIS_DIR}/include
 ############################################################################
 
 # Define the required Fortran libraries, if you use C compiler to link
-FLIBS	 	= 
+# FLIBS	 	= -lpgf90 -lpgf90_rpm1  ## for PGI compiler
+#FLIBS	 	= -lifport -lifcore     ## for Intel compiler
 
 # Define all the libraries
-LIBS   	= $(DSUPERLULIB) $(PARMETISLIB) $(METISLIB) $(BLASLIB) $(FLIBS)
-
-# Include directories for header files
-INCS	= ${I_PARMETIS}
-
-ifeq "${ACC}" "GPU"
-CUDA_FLAGS = -DGPU_ACC
-INCS += -I/usr/common/usg/cuda/5.5/include
-LIBS += -L/usr/common/usg/cuda/5.5/lib64 -lcublas -lcudart 
-endif
+LIBS	     	= $(DSUPERLULIB) $(BLASLIB) $(PARMETISLIB) $(METISLIB) $(FLIBS)
 
 #
 #  The archiver and the flag(s) to use when building archive (library)
@@ -62,24 +55,25 @@ ARCH         	= ar
 ARCHFLAGS    	= cr
 RANLIB       	= ranlib
 
-
 ############################################################################
 # C compiler setup
 CC           	= mpicc
 # CFLAGS should be set to be the C flags that include optimization
-CFLAGS          = ${CUDA_FLAGS} ${INCS} -std=c99 -O3 -fPIC \
-		-DDEBUGlevel=0 -DPRNTlevel=1 -DPROFlevel=0
-#		-D_LONGINT 
-#	-Wunused-variable 
-#
+CFLAGS          = -std=c99 -O3 -fPIC \
+		$(I_PARMETIS) -DDEBUGlevel=0 -DPRNTlevel=1 -DPROFlevel=0
+# uncomment the following to use 64-bit integer
+# CFLAGS 		+= -D_LONGINT
+
 # NOOPTS should be set to be the C flags that turn off any optimization
 NOOPTS		= -O0 -fPIC
 ############################################################################
 # FORTRAN compiler setup
 FORTRAN         = mpif90
 F90FLAGS	= -O3 -fPIC
+# uncomment the following to use 64-bit integer
+# F90FLAGS	+= -i8
 ############################################################################
-LOADER	        = mpicc
+LOADER	        = $(CC)
 LOADOPTS	= 
 ############################################################################
 #  C preprocessor defs for compilation (-DNoChange, -DAdd_, or -DUpCase)

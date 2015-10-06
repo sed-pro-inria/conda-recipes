@@ -1,10 +1,10 @@
 package:
   name: mumps
-  version: 4.10.0
+  version: 4.10.0p3
 
 source:
-  fn: MUMPS_4.10.0.tar.gz
-  url: http://mumps.enseeiht.fr/MUMPS_4.10.0.tar.gz
+  fn: MUMPS_4.10.0-p3.tar.gz
+  url: http://ftp.mcs.anl.gov/pub/petsc/externalpackages/MUMPS_4.10.0-p3.tar.gz
 
 build:
   number: 0
@@ -13,14 +13,12 @@ build:
 requirements:
   build:
     - openblas
-    - openmpi
-    - scalapack
-    - parmetis
+    - scalapack 2.0*
+    - parmetis 4.0.2*
   run:
     - openblas
-    - openmpi
-    - scalapack
-    - parmetis
+    - scalapack 2.0*
+    - parmetis 4.0.2*
 
 about:
   home: http://mumps.enseeiht.fr/

@@ -10,11 +10,10 @@ python config/configure.py \
     --with-scalapack-dir=$PREFIX \
     --with-parmetis-dir=$PREFIX \
     --with-mumps-dir=$PREFIX \
-    --with-superlu_dist-dir=$PREFIX \
-    --with-suitesparse-dir=$PREFIX
+    --with-superlu_dist-dir=$PREFIX
 
 make all
 
 make install
 
-# todo: mpi4py, petsc4py fiat, fftw, boost
+# todo: mpi4py, petsc4py fiat, fftw, boost, suitesparse

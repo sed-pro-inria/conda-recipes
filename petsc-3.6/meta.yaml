@@ -1,0 +1,26 @@
+package:
+  name: petsc
+  version: 3.6.2
+
+source:
+  fn: petsc-lite-3.6.2.tar.gz
+  url: http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.6.2.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - python
+    - cmake
+    - mumps 5.0*
+    - superlu_dist 4.1*
+  run:
+    - mumps 5.0*
+    - superlu_dist 4.1*
+
+about:
+  home: http://www.mcs.anl.gov/petsc/
+  license: BSD
+  summary: 'PETSc: Portable, Extensible Toolkit for Scientific Computation'

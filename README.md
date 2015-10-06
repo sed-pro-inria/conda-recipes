@@ -12,16 +12,7 @@ file does not defined `OPENBLAS_USE64BITINT`, so `blasint` is a int (32 bits).
 
 ## `metis` and `parmetis`
 
-In `build.sh`, `REALTYPEWIDTH` is set to 64, and `IDXTYPEWIDTH` is left to 32.
-
-To build `metis` with 64 bits index integers, we would have use in `build.sh`:
-
-    sed -i.bak 's/#define IDXTYPEWIDTH 32/#define IDXTYPEWIDTH 64/' include/metis.h
-
-To build `parmetis` with 64 bits index integers, we would have use in `build.sh`:
-
-    sed -i.bak 's/#define IDXTYPEWIDTH 32/#define IDXTYPEWIDTH 64/' metis/include/metis.h
-
+Configured with: longindex=0 and doubleprecision=1
 
 ## `superlu_dist`
 
