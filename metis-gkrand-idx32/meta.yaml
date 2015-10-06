@@ -1,0 +1,22 @@
+package:
+  name: metis-gkrand-idx32
+  version: 5.1.0
+
+source:
+  fn: metis-5.1.0.tar.gz
+  url: http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-5.1.0.tar.gz
+  patches:
+    - add_gkrand_makefile_flag.patch
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - cmake
+
+about:
+  home: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
+  license: Apache 2.0
+  summary: Serial Graph Partitioning and Fill-reducing Matrix Ordering
