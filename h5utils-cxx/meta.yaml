@@ -10,7 +10,7 @@ source:
     - fix_dereferencing_pointer_to_incomplete_type.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
