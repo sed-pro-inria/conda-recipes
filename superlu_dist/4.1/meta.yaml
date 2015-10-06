@@ -13,10 +13,10 @@ build:
 requirements:
   build:
     - openblas
-    - parmetis 4.0.3
+    - parmetis 4.0.3*
   run:
     - openblas
-    - parmetis 4.0.3
+    - parmetis 4.0.3*
 
 about:
   home: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/
