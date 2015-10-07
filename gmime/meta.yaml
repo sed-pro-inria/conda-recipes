@@ -1,0 +1,23 @@
+package:
+  name: gmime
+  version: 2.6.20
+
+source:
+  fn: gmime-2.6.20.tar.xz 
+  url: https://download.gnome.org/sources/gmime/2.6/gmime-2.6.20.tar.xz 
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - glib
+    - libgpg-error
+  run:
+    - glib
+    - libgpg-error
+
+about:
+  home: http://spruce.sourceforge.net/gmime
+  license: GPL
+  summary: GMime is a C/C++ library which may be used for the creation and parsing of messages using the Multipurpose Internet Mail Extension (MIME)
