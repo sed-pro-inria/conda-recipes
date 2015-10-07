@@ -1,6 +1,5 @@
 gcc \
     -I. -fno-common -fPIC -shared \
-    -Wl,-soname,$PWD/libmesh5.so \
     -o libmesh5.so \
     libmesh5.c
 
