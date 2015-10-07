@@ -1,0 +1,19 @@
+package:
+  name: libgpg-error
+  version: 1.19
+
+source:
+  fn: libgpg-error-1.19.tar.bz2
+  url: https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.19.tar.bz2
+
+build:
+  number: 0
+
+requirements:
+  build:
+  run:
+
+about:
+  home: https://www.gnupg.org/related_software/libgpg-error/index.html
+  license: GPL
+  summary: Libgpg-error is a small library that defines common error values for all GnuPG components.
