@@ -1,0 +1,23 @@
+package:
+  name: xapian
+  version: 1.2.21
+
+source:
+  fn: xapian-core-1.2.21.tar.xz
+  url: http://oligarchy.co.uk/xapian/1.2.21/xapian-core-1.2.21.tar.xz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - zlib
+    - util-linux
+  run:
+    - zlib
+    - util-linux
+
+about:
+  home: http://xapian.org
+  license: GPL
+  summary: Xapian is an Open Source Search Engine Library, released under the GPL.
