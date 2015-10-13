@@ -7,7 +7,8 @@ source:
   url: https://github.com/vim/vim/archive/v7.4.891.tar.gz
 
 build:
-  number: 0
+  number: 3
+  detect_binary_files_with_prefix: True
 
 requirements:
   build:

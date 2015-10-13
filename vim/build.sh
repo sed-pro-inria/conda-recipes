@@ -6,7 +6,9 @@ LDFLAGS=-L$PREFIX/lib \
     --enable-rubyinterp=yes \
     --enable-tclinterp=no \
     --enable-cscope \
-    --enable-gui=no
+    --enable-gui=no \
+    --enable-fontset \
+    -with-features=huge
 
 make
 make install
