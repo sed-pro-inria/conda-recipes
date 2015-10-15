@@ -1,5 +1,5 @@
 package:
-  name: freshkiss3d-waf
+  name: waf
   version: 1.8.9
 
 source:
