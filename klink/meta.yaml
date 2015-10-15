@@ -1,0 +1,24 @@
+package:
+  name: klink
+  version: 0.1.9
+
+source:
+  fn: sqlalchemy-migrate-0.7.2.tar.gz
+  url: https://pypi.python.org/packages/source/k/klink/klink-0.1.9.tar.gz
+  md5: d599b13bf66db5f6d4f9b46600cbfa6a
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - pip
+
+  run:
+    - python
+
+about:
+  home: http://pmorissette.github.io/klink/
+  license: MPI
+  summary: A Simple and Clean Sphinx Docs Theme
