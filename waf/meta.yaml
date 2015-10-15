@@ -1,0 +1,21 @@
+package:
+  name: freshkiss3d-waf
+  version: 1.8.9
+
+source:
+  url: https://waf.io/waf-1.8.9.tar.bz2
+  fn: waf-1.8.9.tar.bz2
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+about:
+  home: https://waf.io/
+  license: New BSD
+  summary: Waf is a Python-based framework for configuring, compiling and installing applications.
