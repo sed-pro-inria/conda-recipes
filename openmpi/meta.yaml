@@ -8,7 +8,8 @@ source:
   md5: eb569e7dc97eeaa5b1876cccf114f377
 
 build:
-  number: 2
+  number: 2 # [linux]
+  number: 0 # [osx]
   binary_relocation: true
   detect_binary_files_with_prefix: true
 
