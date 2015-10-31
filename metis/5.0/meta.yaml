@@ -7,12 +7,12 @@ source:
   url: http://ftp.mcs.anl.gov/pub/petsc/externalpackages/metis-5.0.2-p3.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
   build:
-    - cmake
+    - cmake 2.8*
 
 about:
   home: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview

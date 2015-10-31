@@ -12,7 +12,7 @@ build:
 
 requirements:
   build:
-    - cmake
+    - cmake 2.8*
     - openmpi 1.8*
     - metis 5.0*
   run:

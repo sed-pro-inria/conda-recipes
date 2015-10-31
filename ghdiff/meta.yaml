@@ -1,0 +1,37 @@
+package:
+  name: ghdiff
+  version: 0.4
+
+source:
+  fn: ghdiff-0.4.tar.gz
+  url: https://pypi.python.org/packages/source/g/ghdiff/ghdiff-0.4.tar.gz
+  md5: 3c4c7f0c6035be92f7fb68c28bf5423a
+
+build:
+  entry_points:
+    - ghdiff = ghdiff:main
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - six
+    - chardet
+
+  run:
+    - python
+    - six
+    - chardet
+
+test:
+  # Python imports
+  imports:
+    - ghdiff
+
+  commands:
+    - ghdiff --help
+
+about:
+  home: https://github.com/kilink/ghdiff
+  license: MIT License
+  summary: 'Generate Github-style HTML for unified diffs.'

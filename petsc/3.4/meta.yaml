@@ -7,7 +7,8 @@ source:
   url: http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.4.5.tar.gz
 
 build:
-  number: 0
+  number: 0 # [linux]
+  number: 1 # [osx]
   binary_relocation: true
 
 requirements:
@@ -16,9 +17,11 @@ requirements:
     - cmake
     - mumps 4.10*
     - superlu_dist 3.3*
+    - libgcc # [osx]
   run:
     - mumps 4.10*
     - superlu_dist 3.3*
+    - libgcc # [osx]
 
 about:
   home: http://www.mcs.anl.gov/petsc/

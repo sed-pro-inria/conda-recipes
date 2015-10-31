@@ -12,11 +12,11 @@ build:
 
 requirements:
   build:
-    - openblas
+    - openblas #[linux]
     - scalapack 2.0*
     - parmetis 4.0.2*
   run:
-    - openblas
+    - openblas #[linux]
     - scalapack 2.0*
     - parmetis 4.0.2*
 

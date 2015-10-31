@@ -1,0 +1,23 @@
+package:
+  name: yaml-cpp
+  version: 0.5.2
+
+source:
+  fn: release-0.5.2.tar.gz
+  url: https://github.com/jbeder/yaml-cpp/archive/release-0.5.2.tar.gz
+
+build:
+  number: 0
+  binary_relocation: true
+
+requirements:
+  build:
+    - cmake
+    - boost
+  run:
+    - boost
+
+about:
+  home: https://code.google.com/p/yaml-cpp/
+  license: MIT
+  summary: A YAML parser and emitter in C++

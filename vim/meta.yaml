@@ -1,0 +1,26 @@
+package:
+  name: vim
+  version: 7.4.891
+
+source:
+  fn: v7.4.891.tar.gz
+  url: https://github.com/vim/vim/archive/v7.4.891.tar.gz
+
+build:
+  number: 3
+  detect_binary_files_with_prefix: True
+
+requirements:
+  build:
+    - python 2.7*
+    - ruby
+    - ncurses
+  run:
+    - python 2.7*
+    - ruby
+    - ncurses
+
+about:
+  home: http://www.vim.org
+  license: GPL-compatible
+  summary: Vim is a highly configurable text editor built to enable efficient text editing.

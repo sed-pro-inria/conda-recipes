@@ -12,10 +12,10 @@ build:
 
 requirements:
   build:
-    - openblas
+    - openblas # [linux]
     - openmpi 1.8*
   run:
-    - openblas
+    - openblas # [linux]
     - openmpi 1.8*
 
 about:
