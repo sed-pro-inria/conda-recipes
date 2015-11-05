@@ -8,9 +8,8 @@ if [ "$(uname)" == "Darwin" ];
 then
     export MACOSX_DEPLOYMENT_TARGET=10.7
     export CC=clang
-    export CXX=clang++
+    export CXX="clang++ -stdlib=libc++ -mmacosx-version-min=10.7"
     export CFLAGS="-mmacosx-version-min=10.7"
-    export CXXFLAGS="-stdlib=libc++ -mmacosx-version-min=10.7"
 fi
 
 ./configure \
@@ -21,6 +20,6 @@ fi
     --enable-shared=yes \
     --enable-static=yes
 
-make -j $CPU_COUNT 
+make -j $CPU_COUNT V=1
 
 make install

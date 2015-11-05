@@ -9,7 +9,7 @@ source:
 
 build:
   number: 3 # [linux]
-  number: 3 # [osx]
+  number: 4 # [osx]
   binary_relocation: true
   detect_binary_files_with_prefix: true
 
