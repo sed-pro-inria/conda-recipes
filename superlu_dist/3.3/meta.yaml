@@ -7,7 +7,7 @@ source:
   url: http://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_dist_3.3.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
