@@ -53,6 +53,10 @@ Available libraries are:
      - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/superlu_dist>`_,
        `packages <http://anaconda.org/inria-pro-sed/superlu_dist/files>`_
 
+.. note::
+
+    * `Open MPI` is build with `C`, `C++` and `Fortran` API.
+
 Relationships between main libraries are:
 
 .. digraph:: petsc
@@ -138,6 +142,10 @@ Available libraries:
      - A YAML parser and emitter in C++
      - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/yaml-cpp>`_,
        `packages <http://anaconda.org/inria-pro-sed/yaml-cpp/files>`_
+
+.. note::
+
+    * `HDF5` is build with `C` and `C++` API.
 
 Python bindings
 -------------------------------------------------------------------
