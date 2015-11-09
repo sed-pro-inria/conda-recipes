@@ -22,3 +22,4 @@ requirements:
 about:
   home: https://bitbucket.org/mpi4py/mpi4py
   license: BSD
+  summary: This package provides Python bindings for the Message Passing Interface (MPI) standard.

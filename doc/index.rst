@@ -1,22 +1,48 @@
-.. INRIA Paris/Rocquencourt Conda packages documentation master file, created by
-   sphinx-quickstart on Fri Nov  6 15:23:35 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+###################################################################
+INRIA Paris-Rocquencourt SED Conda Channel
+###################################################################
 
-INRIA Paris/Rocquencourt Conda packages's documentation
-===================================================================
+The `INRIA Paris-Rocquencourt
+<http://www.inria.fr/en/centre/paris-rocquencourt>`_ SED `Conda channel`_ aims
+at easily distributing scientific software and libraries using the `Conda`_
+package manager.
 
-Contents:
+Supported platforms are GNU/Linux 64 bits (old system like Cent OS 5 are not
+supported) and OSX from 10.7 to 10.11. Windows is not supported yet (no plan
+to support it for now).
+
+Root privileges are not required, except for installing compilers in the
+system.
+
+`Conda recipes`_ are available.
+
+
+*******************************************************************
+User documentation
+*******************************************************************
+
 
 .. toctree::
    :maxdepth: 2
 
+   getting-started
+   package-listing
+   package-details
+   package-linking
 
 
-Indices and tables
-==================
+*******************************************************************
+Packager documentation
+*******************************************************************
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
+.. toctree::
+   :maxdepth: 2
+
+   package-building
+   package-testing
+   documenting
+
+.. _Conda channel: http://anaconda.org/sed-pro-inria
+.. _Conda: http://conda.pydata.org/docs
+.. _Conda recipes: https://github.com/sed-pro-inria/conda-recipes
