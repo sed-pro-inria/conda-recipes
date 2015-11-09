@@ -57,22 +57,52 @@ Available libraries are:
 
     * `Open MPI` is build with `C`, `C++` and `Fortran` API.
 
-Relationships between main libraries are:
+Relationships between main libraries are (blue indicate package provided by
+`continuum.io <https://repo.continuum.io/pkgs/>`_).
 
 .. digraph:: petsc
 
-    "PETSc" -> "Mumps";
-    "PETSc" -> "SuperLU_DIST";
-    "Mumps" -> "ScaLAPACK";
-    "Mumps" -> "ParMETIS";
-    "ScaLAPACK" -> "OpenBLAS";
-    "ScaLAPACK" -> "Open MPI";
-    "SuperLU_DIST" -> "OpenBLAS";
-    "SuperLU_DIST" -> "ParMETIS";
-    "ParMETIS" -> "METIS";
-    "ParMETIS" -> "Open MPI";
+    PETSc -> Mumps
+    PETSc -> SuperLU_DIST
+    Mumps -> ScaLAPACK
+    Mumps -> ParMETIS
+    ScaLAPACK -> OpenBLAS
+    ScaLAPACK -> OpenMPI
+    SuperLU_DIST -> OpenBLAS
+    SuperLU_DIST -> ParMETIS
+    ParMETIS -> METIS
+    ParMETIS -> Open MPI
 
+    OpenBLAS [color=blue]
 
+.. digraph:: dolfin
+ 
+    dolfin -> boost
+    dolfin -> qt
+    dolfin -> vtk
+    dolfin -> Eigen3
+    dolfin -> ffc
+    dolfin -> ply
+    dolfin -> OpenMPI
+    ffc -> ufl
+    ffc -> fiat
+    ffc -> instant
+    ufl -> six
+    fiat -> numpy
+    fiat -> sympy
+    instant -> swig
+    instant -> numpy
+    instant -> cmake
+
+    qt [color=blue]
+    boost [color=blue]
+    numpy [color=blue]
+    vtk [color=blue]
+    six [color=blue]
+    swig [color=blue]
+    ply [color=blue]
+    sympy [color=blue]
+    cmake [color=blue]
 
 Software engineering tools
 -------------------------------------------------------------------

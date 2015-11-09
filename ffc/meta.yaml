@@ -13,13 +13,10 @@ build:
 requirements:
   build:
     - python
-    - numpy
     - swig
 
   run:
     - python
-    - numpy
-    - swig
     - ufl ==1.5.0
     - fiat ==1.5.0
     - instant ==1.5.0
