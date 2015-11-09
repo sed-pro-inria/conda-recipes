@@ -44,6 +44,13 @@ Packager documentation
    package-testing
    documenting
 
+*******************************************************************
+Contact
+*******************************************************************
+
+Any feedback is welcome! Open a issue or send a pull request on :ref:`github`,
+or contact me at david.froger@inria.fr.
+
 .. _Conda channel: http://anaconda.org/inria-pro-sed
 .. _Conda: http://conda.pydata.org/docs
 .. _Conda recipes: https://github.com/sed-pro-inria/conda-recipes
