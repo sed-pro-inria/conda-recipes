@@ -90,19 +90,19 @@ Relationships between main libraries are (blue indicate package provided by
     ufl -> six
     fiat -> numpy
     fiat -> sympy
-    instant -> swig
+    instant -> SWIG
     instant -> numpy
-    instant -> cmake
+    instant -> CMake
 
     qt [color=blue]
     boost [color=blue]
     numpy [color=blue]
     vtk [color=blue]
     six [color=blue]
-    swig [color=blue]
+    SWIG [color=blue]
     ply [color=blue]
     sympy [color=blue]
-    cmake [color=blue]
+    CMake [color=blue]
 
 Software engineering tools
 -------------------------------------------------------------------
