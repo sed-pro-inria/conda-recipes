@@ -71,7 +71,7 @@ Relationships between main libraries are (blue indicate package provided by
     SuperLU_DIST -> OpenBLAS
     SuperLU_DIST -> ParMETIS
     ParMETIS -> METIS
-    ParMETIS -> Open MPI
+    ParMETIS -> OpenMPI
 
     OpenBLAS [color=blue]
 
