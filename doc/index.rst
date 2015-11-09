@@ -43,6 +43,6 @@ Packager documentation
    package-testing
    documenting
 
-.. _Conda channel: http://anaconda.org/sed-pro-inria
+.. _Conda channel: http://anaconda.org/inria-pro-sed
 .. _Conda: http://conda.pydata.org/docs
 .. _Conda recipes: https://github.com/sed-pro-inria/conda-recipes

@@ -91,7 +91,7 @@ in order to omit the `-c` option:
     conda install petsc
 
 .. _installer: http://conda.pydata.org/miniconda.html
-.. _Conda channel: http://anaconda.org/sed-pro-inria
+.. _Conda channel: http://anaconda.org/inria-pro-sed
 .. _Conda: http://conda.pydata.org/docs
 .. _`HPC Mac OS X`: http://hpc.sourceforge.net/
 .. _`Conda cheat sheet`: http://conda.pydata.org/docs/_downloads/conda-cheatsheet.pdf
