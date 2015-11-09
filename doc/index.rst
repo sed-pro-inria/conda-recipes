@@ -39,6 +39,7 @@ Packager documentation
 .. toctree::
    :maxdepth: 2
 
+   external-links
    package-building
    package-testing
    documenting

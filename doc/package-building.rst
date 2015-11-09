@@ -47,6 +47,9 @@ Packages are build and Vagrant boxes for reproducibility.
 
 Make sure to have the most recent version of `VirtualBox
 <https://www.virtualbox.org>`_ and `Vagrant <https://www.vagrantup.com>`_.
+
+Vagrant boxes are hosted on `hashicorp
+<https://atlas.hashicorp.com/inria-pro-sed>`_.
     
 Using vagrant boxes
 -------------------------------------------------------------------
