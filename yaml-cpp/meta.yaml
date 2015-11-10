@@ -7,7 +7,7 @@ source:
   url: https://github.com/jbeder/yaml-cpp/archive/release-0.5.2.tar.gz
 
 build:
-  number: 0
+  number: 1
   binary_relocation: true
 
 requirements:
