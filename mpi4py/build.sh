@@ -2,10 +2,8 @@
 set -o errexit
 set -o pipefail
 
-if [ -z "$OSX_ARCH" ]
+if [ "$(uname)" == "Darwin" ];
 then
-    :
-else
     export CC=clang
     export CXX=clang
 
