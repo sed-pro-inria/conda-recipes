@@ -23,7 +23,7 @@ construct:
 
 .. code-block:: bash
 
-    if [ "$(uname)" == "Darwin" ];
+    if [ "$(uname)" == "Darwin" ]
     then
         # OSX recipe
     else
