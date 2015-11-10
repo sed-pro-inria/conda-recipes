@@ -37,8 +37,8 @@ use these settings:
 .. code-block:: bash
 
    export MACOSX_DEPLOYMENT_TARGET=10.7
-   CFLAGS="-mmacosx-version-min=10.7"
-   CXXFLAGS="-stdlib=libc++ -mmacosx-version-min=10.7"
+   export CFLAGS="-mmacosx-version-min=10.7"
+   export CXXFLAGS="-stdlib=libc++ -mmacosx-version-min=10.7"
 
 Vagrant boxes
 -------------------------------------------------------------------
