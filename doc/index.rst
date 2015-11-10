@@ -40,7 +40,8 @@ Packager documentation
    :maxdepth: 2
 
    external-links
-   package-building
+   build-sh-guidelines
+   vagrant-boxes
    package-testing
    documenting
 

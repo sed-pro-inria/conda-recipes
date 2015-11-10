@@ -7,4 +7,4 @@ Install sphinx:
 
 .. code-block:: bash
 
-    conda install python=3.5 sphinx sphinx_rtd_theme
+    conda install python=3.5 sphinx

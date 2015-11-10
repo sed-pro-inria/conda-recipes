@@ -1,47 +1,5 @@
-Packages building
-===================================================================
-
-Building packages is documented in the 
-`Conda documentation <http://conda.pydata.org/docs/building/build.html>`_.
-
-`Conda recipes <https://github.com/sed-pro-inria/conda-recipes>`_ are available
-on GitHub.
-
-`build.sh` guidelines.
--------------------------------------------------------------------
-
-Build shared libraries when possible (requires `-fPIC` flag).
-
-If building a static library, use the `-fPIC` flag too: the static library may
-be used latter in a dynamic library.
-
-If different logic must be performed on `GNU/Linux` and `OSX`, use the
-construct:
-
-.. code-block:: bash
-
-    if [ "$(uname)" == "Darwin" ];
-    then
-        # OSX recipe
-    else
-        # GNU/Linux recipe
-    fi
-
-When building `C` code on `OSX`, use `clang` or `mpicc`.
-`MACOSX_DEPLOYMENT_TARGET` is already automatically set to `10.6` by
-`conda-build`.
-
-When building `C++` code on `OSX`, use `clang++` or `mpicxx`. Also
-use these settings:
-
-.. code-block:: bash
-
-   export MACOSX_DEPLOYMENT_TARGET=10.7
-   export CFLAGS="-mmacosx-version-min=10.7"
-   export CXXFLAGS="-stdlib=libc++ -mmacosx-version-min=10.7"
-
 Vagrant boxes
--------------------------------------------------------------------
+===================================================================
 
 Packages are build and Vagrant boxes for reproducibility.
 
