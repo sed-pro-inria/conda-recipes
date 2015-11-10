@@ -1,0 +1,372 @@
+// Build DOLFIN with shared libraries.
+BUILD_SHARED_LIBS:BOOL=ON
+
+// Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=Boost_FILESYSTEM_LIBRARY_DEBUG-NOTFOUND
+
+// Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=Boost_FILESYSTEM_LIBRARY_RELEASE-NOTFOUND
+
+// Path to a file.
+Boost_INCLUDE_DIR:PATH=Boost_INCLUDE_DIR-NOTFOUND
+
+// Boost iostreams library (debug)
+Boost_IOSTREAMS_LIBRARY_DEBUG:FILEPATH=Boost_IOSTREAMS_LIBRARY_DEBUG-NOTFOUND
+
+// Boost iostreams library (release)
+Boost_IOSTREAMS_LIBRARY_RELEASE:FILEPATH=Boost_IOSTREAMS_LIBRARY_RELEASE-NOTFOUND
+
+// Boost program_options library (debug)
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG:FILEPATH=Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG-NOTFOUND
+
+// Boost program_options library (release)
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:FILEPATH=Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE-NOTFOUND
+
+// Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=Boost_SYSTEM_LIBRARY_DEBUG-NOTFOUND
+
+// Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=Boost_SYSTEM_LIBRARY_RELEASE-NOTFOUND
+
+// Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=Boost_THREAD_LIBRARY_DEBUG-NOTFOUND
+
+// Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=Boost_THREAD_LIBRARY_RELEASE-NOTFOUND
+
+// Path to a program.
+CMAKE_AR:FILEPATH=/bin/ar
+
+// Choose the type of build, options are: Debug Developer MinSizeRel Release RelWithDebInfo.
+CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+
+// Enable/Disable color output during build.
+CMAKE_COLOR_MAKEFILE:BOOL=ON
+
+// CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=/usr/local/ccache/bin/c++
+
+// Flags used by the compiler during all build types.
+CMAKE_CXX_FLAGS:STRING=
+
+// Flags used by the compiler during debug builds.
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the compiler during development.
+CMAKE_CXX_FLAGS_DEVELOPER:STRING=-O2 -g -Wall -Werror -pedantic -pipe 
+
+// Flags used by the compiler during release builds for minimum size.
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+// Flags used by the compiler during release builds.
+CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the compiler during release builds with debug info.
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/local/ccache/bin/cc
+
+// Flags used by the compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+// Flags used by the compiler during debug builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the compiler during release builds for minimum size.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+// Flags used by the compiler during release builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the compiler during release builds with debug info.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// Flags used by the linker.
+CMAKE_EXE_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during debug builds.
+CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during release minsize builds.
+CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during release builds.
+CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during Release with Debug Info builds.
+CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
+
+// Fortran compiler
+CMAKE_Fortran_COMPILER:FILEPATH=/bin/gfortran
+
+// Flags for Fortran compiler.
+CMAKE_Fortran_FLAGS:STRING=
+
+// Flags used by the compiler during debug builds.
+CMAKE_Fortran_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the compiler during release builds for minimum size.
+CMAKE_Fortran_FLAGS_MINSIZEREL:STRING=-Os
+
+// Flags used by the compiler during release builds.
+CMAKE_Fortran_FLAGS_RELEASE:STRING=-O3
+
+// Flags used by the compiler during release builds with debug info.
+CMAKE_Fortran_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// Install path prefix, prepended onto install directories.
+CMAKE_INSTALL_PREFIX:PATH=/usr/local
+
+// Add paths to linker search and installed rpath.
+CMAKE_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
+
+// Path to a program.
+CMAKE_LINKER:FILEPATH=/bin/ld
+
+// Path to a program.
+CMAKE_MAKE_PROGRAM:FILEPATH=/bin/gmake
+
+// Flags used by the linker during the creation of modules.
+CMAKE_MODULE_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during debug builds.
+CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during release minsize builds.
+CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during release builds.
+CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during Release with Debug Info builds.
+CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Path to a program.
+CMAKE_NM:FILEPATH=/bin/nm
+
+// Path to a program.
+CMAKE_OBJCOPY:FILEPATH=/bin/objcopy
+
+// Path to a program.
+CMAKE_OBJDUMP:FILEPATH=/bin/objdump
+
+// Path to a program.
+CMAKE_RANLIB:FILEPATH=/bin/ranlib
+
+// Flags used by the linker during the creation of dll's.
+CMAKE_SHARED_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during debug builds.
+CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during release minsize builds.
+CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during release builds.
+CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during Release with Debug Info builds.
+CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// If set, runtime paths are not added when installing shared libraries, but are added when building.
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
+
+// Do not add runtime paths when using shared libraries.
+CMAKE_SKIP_RPATH:BOOL=NO
+
+// Flags used by the linker during the creation of static libraries.
+CMAKE_STATIC_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during debug builds.
+CMAKE_STATIC_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during release minsize builds.
+CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during release builds.
+CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during Release with Debug Info builds.
+CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Path to a program.
+CMAKE_STRIP:FILEPATH=/bin/strip
+
+// Use relative paths in makefiles and projects.
+CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
+
+// If this value is on, makefiles will be generated without the .SILENT directive, and all commands will be echoed to the console during the make.  This is useful for debugging only. With Visual Studio IDE projects all commands are done without /nologo.
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+// Detect MPI automatically - turn this off to use the MPI compiler wrappers directly via setting CXX, CXX, FC.
+DOLFIN_AUTO_DETECT_MPI:BOOL=ON
+
+// Use extra uBLAS debugging.
+DOLFIN_DEBUG_UBLAS:BOOL=OFF
+
+// Turn deprecation warnings into errors.
+DOLFIN_DEPRECATION_ERROR:BOOL=OFF
+
+// Enable benchmark programs.
+DOLFIN_ENABLE_BENCHMARKS:BOOL=OFF
+
+// Compile with support for CHOLMOD.
+DOLFIN_ENABLE_CHOLMOD:BOOL=ON
+
+// Enable code coverage.
+DOLFIN_ENABLE_CODE_COVERAGE:BOOL=OFF
+
+// Enable generation of documentation.
+DOLFIN_ENABLE_DOCS:BOOL=ON
+
+// Compile with support for HDF5.
+DOLFIN_ENABLE_HDF5:BOOL=ON
+
+// Compile with support for MPI.
+DOLFIN_ENABLE_MPI:BOOL=ON
+
+// Compile with support for OpenMP.
+DOLFIN_ENABLE_OPENMP:BOOL=ON
+
+// Compile with support for ParMETIS.
+DOLFIN_ENABLE_PARMETIS:BOOL=ON
+
+// Compile with support for PaStiX.
+DOLFIN_ENABLE_PASTIX:BOOL=ON
+
+// Compile with support for PETSc.
+DOLFIN_ENABLE_PETSC:BOOL=ON
+
+// Compile with support for PETSc4py.
+DOLFIN_ENABLE_PETSC4PY:BOOL=ON
+
+// Compile with support for Python.
+DOLFIN_ENABLE_PYTHON:BOOL=ON
+
+// Compile with support for QT.
+DOLFIN_ENABLE_QT:BOOL=ON
+
+// Compile with support for SCOTCH.
+DOLFIN_ENABLE_SCOTCH:BOOL=ON
+
+// Compile with support for SLEPc.
+DOLFIN_ENABLE_SLEPC:BOOL=ON
+
+// Compile with support for SLEPc4py.
+DOLFIN_ENABLE_SLEPC4PY:BOOL=ON
+
+// Compile with support for Sphinx.
+DOLFIN_ENABLE_SPHINX:BOOL=ON
+
+// Enable TAO solver.
+DOLFIN_ENABLE_TAO:BOOL=OFF
+
+// Enable testing.
+DOLFIN_ENABLE_TESTING:BOOL=OFF
+
+// Compile with support for Trilinos.
+DOLFIN_ENABLE_TRILINOS:BOOL=ON
+
+// Compile with support for UMFPACK.
+DOLFIN_ENABLE_UMFPACK:BOOL=ON
+
+// Enable unit tests.
+DOLFIN_ENABLE_UNIT_TESTS:BOOL=ON
+
+// Compile with support for VTK.
+DOLFIN_ENABLE_VTK:BOOL=ON
+
+// Compile with support for zlib.
+DOLFIN_ENABLE_ZLIB:BOOL=ON
+
+// Skip build tests.
+DOLFIN_SKIP_BUILD_TESTS:BOOL=OFF
+
+// Build with library version information.
+DOLFIN_WITH_LIBRARY_VERSION:BOOL=ON
+
+// Path to a program.
+GIT_FOUND:FILEPATH=/bin/git
+
+// Executable for running MPI programs.
+MPIEXEC:FILEPATH=MPIEXEC-NOTFOUND
+
+// Maximum number of processors available to run MPI applications.
+MPIEXEC_MAX_NUMPROCS:STRING=2
+
+// Flag used by MPI to specify the number of processes for MPIEXEC; the next option will be the number of processes.
+MPIEXEC_NUMPROC_FLAG:STRING=-np
+
+// These flags will come after all flags given to MPIEXEC.
+MPIEXEC_POSTFLAGS:STRING=
+
+// These flags will be directly before the executable that is being run by MPIEXEC.
+MPIEXEC_PREFLAGS:STRING=
+
+// Path to a program.
+MPI_CXX_COMPILER:FILEPATH=MPI_CXX_COMPILER-NOTFOUND
+
+// MPI CXX compilation flags
+MPI_CXX_COMPILE_FLAGS:STRING=
+
+// MPI CXX include path
+MPI_CXX_INCLUDE_PATH:STRING=MPI_HEADER_PATH-NOTFOUND
+
+// MPI CXX libraries to link against
+MPI_CXX_LIBRARIES:STRING=MPI_CXX_LIBRARIES-NOTFOUND
+
+// MPI CXX linking flags
+MPI_CXX_LINK_FLAGS:STRING=
+
+// Path to a program.
+MPI_C_COMPILER:FILEPATH=MPI_C_COMPILER-NOTFOUND
+
+// MPI C compilation flags
+MPI_C_COMPILE_FLAGS:STRING=
+
+// MPI C include path
+MPI_C_INCLUDE_PATH:STRING=MPI_HEADER_PATH-NOTFOUND
+
+// MPI C libraries to link against
+MPI_C_LIBRARIES:STRING=MPI_C_LIBRARIES-NOTFOUND
+
+// MPI C linking flags
+MPI_C_LINK_FLAGS:STRING=
+
+// Extra MPI libraries to link against
+MPI_EXTRA_LIBRARY:STRING=MPI_EXTRA_LIBRARY-NOTFOUND
+
+// Path to a program.
+MPI_Fortran_COMPILER:FILEPATH=MPI_Fortran_COMPILER-NOTFOUND
+
+// MPI Fortran compilation flags
+MPI_Fortran_COMPILE_FLAGS:STRING=
+
+// MPI Fortran include path
+MPI_Fortran_INCLUDE_PATH:STRING=MPI_HEADER_PATH-NOTFOUND
+
+// MPI Fortran libraries to link against
+MPI_Fortran_LIBRARIES:STRING=MPI_Fortran_LIBRARIES-NOTFOUND
+
+// MPI Fortran linking flags
+MPI_Fortran_LINK_FLAGS:STRING=
+
+// MPI library to link against
+MPI_LIBRARY:FILEPATH=MPI_LIBRARY-NOTFOUND
+
+// C++ compiler flags for OpenMP parallization
+OpenMP_CXX_FLAGS:STRING=-fopenmp
+
+// C compiler flags for OpenMP parallization
+OpenMP_C_FLAGS:STRING=-fopenmp
+
+// Fortran compiler flags for OpenMP parallization
+OpenMP_Fortran_FLAGS:STRING=-fopenmp
+
+// The directory containing a CMake configuration file for UFC.
+UFC_DIR:PATH=UFC_DIR-NOTFOUND
+
