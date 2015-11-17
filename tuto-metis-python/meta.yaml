@@ -1,0 +1,23 @@
+package:
+  name: tuto-metis-python
+  version: 0.2a1
+
+source:
+  fn: metis-0.2a1.tar.gz
+  url: https://bitbucket.org/kw/metis-python/get/metis-0.2a1.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - tuto-metis
+  run:
+    - python
+    - tuto-metis
+
+about:
+  home: https://bitbucket.org/kw/metis-python
+  license: MIT
+  summary: Wrapper for the METIS library for partitioning graphs (and other stuff).
