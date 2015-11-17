@@ -1,0 +1,14 @@
+--- metis.py.orig 2013-10-10 17:28:16.000000000 +0200
++++ metis.py	2015-11-17 15:10:49.402013000 +0100
+@@ -412,6 +412,11 @@
+ # Attempt to locate and load the appropriate shared library
+ _dll_filename = os.getenv('METIS_DLL')
+ if not _dll_filename:
++    for ext in ['.dylib', '.so']:
++        fp = os.path.join(sys.prefix, 'lib', 'libmetis'+ext)
++        if os.path.isfile(fp):
++            _dll_filename  = fp
++if not _dll_filename:
+     try:
+         from ctypes.util import find_library as _find_library
+         _dll_filename = _find_library('metis')

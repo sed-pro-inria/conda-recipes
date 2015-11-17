@@ -5,6 +5,8 @@ package:
 source:
   fn: metis-0.2a1.tar.gz
   url: https://bitbucket.org/kw/metis-python/get/metis-0.2a1.tar.gz
+  patches:
+    - fix_dll_load.patch
 
 build:
   number: 0
