@@ -1,0 +1,14 @@
+package:
+  name: tuto-reloc
+  version: 1.0.0
+
+source:
+  path: src
+
+build:
+  number: 0
+  binary_relocation: true
+  detect_binary_files_with_prefix: True
+      
+about:
+  summary: Demo of Conda packages relocation
