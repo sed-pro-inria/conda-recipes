@@ -153,6 +153,7 @@ Relationships between main libraries are (blue indicate package provided by
     Jinja2 [color=blue]
     SQLAlchemy [color=blue]
     dateutil [color=blue]
+    Decorator [color=blue]
 
 File format libraries
 -------------------------------------------------------------------
