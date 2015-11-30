@@ -133,6 +133,12 @@ Available tools:
      - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/klink>`__,
        `packages <http://anaconda.org/inria-pro-sed/klink/files>`__
 
+   * - `nbtools <https://github.com/thni/nbtools>`_
+     -  Tools for managing IPython notebooks
+     - `recipe <https://github.com/thni/nbtools/tree/master/conda-recipe>`__,
+       `packages <http://anaconda.org/inria-pro-sed/nbtools/files>`__
+
+
 Relationships between main libraries are (blue indicate package provided by
 `continuum.io <https://repo.continuum.io/pkgs/>`_).
 
