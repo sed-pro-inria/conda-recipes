@@ -133,6 +133,26 @@ Available tools:
      - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/klink>`__,
        `packages <http://anaconda.org/inria-pro-sed/klink/files>`__
 
+Relationships between main libraries are (blue indicate package provided by
+`continuum.io <https://repo.continuum.io/pkgs/>`_).
+
+.. digraph:: "buildbot-master"
+
+    "Buildbot Master" -> "python2.7"
+    "Buildbot Master" -> Twisted
+    "Buildbot Master" -> Jinja2
+    "Buildbot Master" -> SQLAlchemy
+    "Buildbot Master" -> dateutil
+    "Buildbot Master" -> "SQLAlchemy Migrate"
+    "SQLAlchemy Migrate" -> SQLAlchemy
+    "SQLAlchemy Migrate" -> Decorator
+    "SQLAlchemy Migrate" -> Tempita
+
+    "python2.7" [color=blue]
+    Twisted [color=blue]
+    Jinja2 [color=blue]
+    SQLAlchemy [color=blue]
+    dateutil [color=blue]
 
 File format libraries
 -------------------------------------------------------------------
