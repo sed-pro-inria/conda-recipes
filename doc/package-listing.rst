@@ -154,6 +154,22 @@ Relationships between main libraries are (blue indicate package provided by
     SQLAlchemy [color=blue]
     dateutil [color=blue]
     Decorator [color=blue]
+    
+.. digraph:: nbtools
+
+   nbtools -> Python
+   nbtools -> Jinja2
+   nbtools -> "IPython Notebook"
+   nbtools -> matplotlib
+   nbtools -> nose
+   nbtools -> ghdiff
+   ghdiff -> chardet 
+
+    Python [color=blue]
+    Jinja2 [color=blue]
+    matplotlib [color=blue]
+    nose [color=blue]
+    "IPython Notebook" [color=blue]
 
 File format libraries
 -------------------------------------------------------------------
