@@ -125,7 +125,25 @@ See the `code <https://github.com/python/cpython/blob/1fe0fd9feb6a4472a9a1b18650
 `-isysroot` is not required because `MACOSX_DEPLOYMENT_TARGET=10.7` and
 `-mmacosx-version-min=10.7` are set, so the better is to not set `CFLAGS`,
 `LDFLAGS` (and `CXXFLAGS` for being consistant), and use build tool command
-line instead.
+line instead, for example, in `build.sh`:
+
+.. code-block:: bash
+
+    export MACOSX_DEPLOYMENT_TARGET=10.7
+
+    export CC=clang
+    export CXX=clang++
+
+    unset CXXFLAGS
+    unset CFLAGS
+    unset LDFLAGS
+
+    $PYTHON waf configure \
+        --prefix=$PREFIX \
+        --cflags='-O3 -DNDEBUG -mmacosx-version-min=10.7 -arch x86_64' \
+        --cxxflags='-O3 -DNDEBUG -stdlib=libc++ -mmacosx-version-min=10.7 -arch x86_64' \
+        --ldflags="-L$PREFIX/lib -O3 -DNDEBUG -stdlib=libc++ -mmacosx-version-min=10.7 -arch x86_64"
+
 
 Path to conda provided libraries on OSX
 -------------------------------------------------------------------
