@@ -7,7 +7,7 @@ source:
   url: http://www-roc.inria.fr/gamma/Loic.Marechal/Downloads/lm5.zip
 
 build:
-  number: 2
+  number: 3
   binary_relocation: true
 
 requirements:

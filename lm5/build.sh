@@ -1,11 +1,13 @@
 if [ "$(uname)" == "Darwin" ];
 then
     EXT=dylib
+    CC=clang
 else
     EXT=so
+    CC=gcc
 fi
 
-gcc \
+$CC \
     -I. -fno-common -fPIC -shared \
     -o libmesh5.$EXT \
     libmesh5.c
