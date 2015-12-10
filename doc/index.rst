@@ -4,10 +4,10 @@ INRIA Paris-Rocquencourt SED Conda Channel
 
 The `INRIA Paris-Rocquencourt
 <http://www.inria.fr/en/centre/paris-rocquencourt>`_ SED `Conda channel`_ aims
-at easily distributing scientific software and libraries using the `Conda`_
+at easily distributing scientific softwares and libraries using the `Conda`_
 package manager.
 
-Supported platforms are GNU/Linux 64 bits (old system like Cent OS 5 are not
+Supported platforms are GNU/Linux 64 bits (old system like CentOS 5 are not
 supported) and OSX from 10.7 to 10.11. Windows is not supported yet (no plan
 to support it for now).
 

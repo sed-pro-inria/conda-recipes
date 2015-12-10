@@ -120,7 +120,7 @@ If `/Developer/SDKs/MacOSX10.5.sdk` is not found (which is the case for the
 **remove** the `-isysroot` flag **except** if the corresponding environment
 variables (`CFLAGS` or `LDFLAGS`) are set.
 
-See the `code <https://github.com/python/cpython/blob/1fe0fd9feb6a4472a9a1b186502eb9c0b2366326/Lib/_osx_support.py#L296>`_ in the ditutils module.
+See the `code <https://github.com/python/cpython/blob/1fe0fd9feb6a4472a9a1b186502eb9c0b2366326/Lib/_osx_support.py#L296>`_ in the `ditutils` module.
 
 `-isysroot` is not required because `MACOSX_DEPLOYMENT_TARGET=10.7` and
 `-mmacosx-version-min=10.7` are set, so the better is to not set `CFLAGS`,

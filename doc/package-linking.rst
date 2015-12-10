@@ -48,7 +48,7 @@ When compiling, provided path to header and library paths as usual:
 
     <compiler> -L$CONDA_ENV_PATH/lib -I$CONDA_ENV_PATH/include  
 
-When linking on `OSX` (not required for `GNU/Linux`, also set the `rpath`:
+When linking on `OSX` (not required for `GNU/Linux`), also set the `rpath`:
 
 .. code-block:: bash
 

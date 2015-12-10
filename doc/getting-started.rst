@@ -2,7 +2,7 @@ Getting started
 ===================================================================
 
 
-Prerequisite on GNU/Linux
+Prerequisites on GNU/Linux
 -------------------------------------------------------------------
 
 Install `gcc`, `g++`, and `gfortran`. For example, using `apt-get`:
@@ -18,7 +18,7 @@ or using `yum`:
     yum install gcc-c++ gcc-gfortran
 
 
-Prerequisite on OSX
+Prerequisites on OSX
 -------------------------------------------------------------------
 
 Install `Xcode Command Line Tools`.
