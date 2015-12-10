@@ -12,13 +12,13 @@ build:
 
 requirements:
   build:
-    - openblas
+    - openblas #[linux]
     - scalapack 2.0*
-    - parmetis 4.0*
+    - parmetis 4.0.3*
   run:
-    - openblas
+    - openblas #[linux]
     - scalapack 2.0*
-    - parmetis 4.0*
+    - parmetis 4.0.3*
 
 about:
   home: http://mumps.enseeiht.fr/
