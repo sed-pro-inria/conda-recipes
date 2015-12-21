@@ -1,8 +1,7 @@
 External links
 ===================================================================
 
-External links are summarize here:
-external-links.
+External links are summarized here:
 
 .. _github:
 

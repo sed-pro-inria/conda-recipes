@@ -21,9 +21,9 @@ On OSX, two implementations of the `C++` standard library are available:
    - The `GNU` implementation: `libstdc++.dylib`
    - The `Clang` implementation: `libc++.dylib`
 
-The `ABI` of these two libraries are incompatible.
+The `ABI` of these two libraries are incompatibles.
 
-All package in the INRIA Paris-Rocquencourt SED Conda channel are built with the
+All packages in the INRIA Paris-Rocquencourt SED Conda channel are built with the
 `Clang` implementation.
 
 .. note:: A Python script (for example), may import a C++ extension linked with 
@@ -72,5 +72,6 @@ channel), has too much problems:
 Build environment
 -------------------------------------------------------------------
 
-Packages are build on Vagrant box, and are in channel tagged with
-the box name and version.
+Packages are built on Vagrant box, and hosted on `anaconda
+<http://anaconda.org/inria-pro-sed>`_ in channels tagged with the box name and
+version.

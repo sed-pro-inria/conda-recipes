@@ -7,7 +7,7 @@ source:
   url: http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.6.2.tar.gz
 
 build:
-  number: 1
+  number: 0
   binary_relocation: true
 
 requirements:

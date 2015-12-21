@@ -1,7 +1,7 @@
 Vagrant boxes
 ===================================================================
 
-Packages are build and Vagrant boxes for reproducibility.
+Packages are built on Vagrant boxes for reproducibility.
 
 Make sure to have the most recent version of `VirtualBox
 <https://www.virtualbox.org>`_ and `Vagrant <https://www.vagrantup.com>`_.
@@ -51,7 +51,7 @@ Build your Conda package and use the `upload` alias to upload on
 `anaconda.org`:
 
     - on the `inria-pro-sed` user,
-    - on the `main,X.X.X` channels.
+    - on the `main,boxname-boxversion` channels.
 
 Build a new box
 -------------------------------------------------------------------
@@ -63,13 +63,13 @@ Update `CHANGELOG`.
 Update version number in `ressources/_bashrc`.
 
 Between two tagged versions, set the version number to X.X.Xdev in
-`vagrant_box_version` file.
+`ressources/_bashrc`.
 
 Commit and tag:
 
 .. code-block:: bash
 
-    git add ressources/_bashrc
+    git add ressources/_bashrc # and other files
     git commit -m "Bump conda-build-centos-6.6 version number to X.X.X"
     git tag centos-6.6-X.X.X
 

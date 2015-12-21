@@ -12,10 +12,10 @@ build:
 
 requirements:
   build:
-    - openblas
+    - openblas # [linux]
     - parmetis 4.0.3*
   run:
-    - openblas
+    - openblas # [linux]
     - parmetis 4.0.3*
 
 about:

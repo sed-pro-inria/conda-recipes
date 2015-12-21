@@ -74,6 +74,11 @@ For example, for typical `autotools` based software:
     ./configure --prefix=$PREFIX
     make V=1
 
+.. warning::
+
+    When building Python extension, `CFLAGS` or `LDFLAGS` environment
+    variables should not be set (see next section).
+
 or for `CMake` based software:
 
 .. code-block:: bash
@@ -89,3 +94,59 @@ or for `CMake` based software:
         -DCMAKE_EXE_LINKER_FLAGS="-stdlib=libc++ -mmacosx-version-min=10.7" \
         -DCMAKE_INSTALL_PREFIX=$PREFIX \
         ..
+
+Python extension
+-------------------------------------------------------------------
+
+Build tools call the `distutils` standard python module (or the
+`python-config` command line tool) to set compiler flags for building python
+extensions.
+
+Python (provided by Conda) has been built with an old XCode version, and
+`distutils` (or `python-config`) may (see bellow) return the flag:
+
+.. code-block:: bash
+
+    -isysroot /Developer/SDKs/MacOSX10.5.sdk
+
+However, `SDK` are now located in:
+
+.. code-block:: bash
+
+   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs
+
+If `/Developer/SDKs/MacOSX10.5.sdk` is not found (which is the case for the
+`conda-build-oxs-10.9` vagrant box), `distutils` (or `python-config`)
+**remove** the `-isysroot` flag **except** if the corresponding environment
+variables (`CFLAGS` or `LDFLAGS`) are set.
+
+See the `code <https://github.com/python/cpython/blob/1fe0fd9feb6a4472a9a1b186502eb9c0b2366326/Lib/_osx_support.py#L296>`_ in the `ditutils` module.
+
+`-isysroot` is not required because `MACOSX_DEPLOYMENT_TARGET=10.7` and
+`-mmacosx-version-min=10.7` are set, so the better is to not set `CFLAGS`,
+`LDFLAGS` (and `CXXFLAGS` for being consistant), and use build tool command
+line instead, for example, in `build.sh`:
+
+.. code-block:: bash
+
+    export MACOSX_DEPLOYMENT_TARGET=10.7
+
+    export CC=clang
+    export CXX=clang++
+
+    unset CXXFLAGS
+    unset CFLAGS
+    unset LDFLAGS
+
+    $PYTHON waf configure \
+        --prefix=$PREFIX \
+        --cflags='-O3 -DNDEBUG -mmacosx-version-min=10.7 -arch x86_64' \
+        --cxxflags='-O3 -DNDEBUG -stdlib=libc++ -mmacosx-version-min=10.7 -arch x86_64' \
+        --ldflags="-L$PREFIX/lib -O3 -DNDEBUG -stdlib=libc++ -mmacosx-version-min=10.7 -arch x86_64"
+
+
+Path to conda provided libraries on OSX
+-------------------------------------------------------------------
+
+On OS X, path to libraries provided by Conda must be provided with
+`-L$PREFIX/lib`.
