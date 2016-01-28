@@ -1,0 +1,16 @@
+package:
+  name: eigen
+  version: 3.2.7
+
+source:
+
+  fn: 3.2.7.tar.bz2
+  url: http://bitbucket.org/eigen/eigen/get/3.2.7.tar.bz2
+
+build:
+  number: 0
+
+about:
+  home: http://eigen.tuxfamily.org
+  summary: Eigen is a C++ template library for linear algebra
+  license: MPL2

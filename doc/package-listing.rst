@@ -53,6 +53,11 @@ Available libraries are:
      - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/superlu_dist>`__,
        `packages <http://anaconda.org/inria-pro-sed/superlu_dist/files>`__
 
+   * - `Eigen <http://eigen.tuxfamily.org/>`_
+     - Eigen is a C++ template library for linear algebra.
+     - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/eigen>`__,
+       `packages <http://anaconda.org/inria-pro-sed/eigen/files>`__
+
 .. note::
 
     * `Open MPI` is build with `C`, `C++` and `Fortran` API.
