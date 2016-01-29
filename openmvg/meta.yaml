@@ -1,0 +1,16 @@
+package:
+  name: openMVG
+  version: 0.9
+
+source:
+
+  fn: v0.9.tar.bz2
+  url: https://github.com/openMVG/openMVG/archive/v0.9.tar.gz
+
+build:
+  number: 0
+
+about:
+  home: https://github.com/openMVG/openMVG
+  summary: OpenMVG (Multiple View Geometry) is a library for computer-vision scientists and targeted for the Multiple View Geometry community.
+  license: MPL2, MIT, BSD
