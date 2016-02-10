@@ -1,0 +1,19 @@
+package:
+  name: openexif
+  version: 2.1.4
+
+source:
+  fn: openexif-2_1_4-src.zip
+  url: http://downloads.sourceforge.net/project/openexif/openexif/2.1.4/openexif-2_1_4-src.zip?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fopenexif%2Ffiles%2Fopenexif%2F2.1.4%2F&ts=1454967266&use_mirror=freefr
+
+requirements:
+  build:
+
+
+build:
+  number: 0
+
+about:
+  home: http://openexif.sourceforge.net/
+  summary: An Exif file is a JPEG image file with additional application segments which can contain tags with metadata (additional data of the image), a thumbnail, a screennail, audio data, etc.
+  license: BSD
