@@ -1,0 +1,14 @@
+package:
+  name: osi
+  version: 0.107.6
+
+source:
+  fn: Osi-0.107.6.tgz
+  url: http://www.coin-or.org/download/source/Osi/Osi-0.107.6.tgz
+build:
+  number: 0 
+
+about:
+  home: https://projects.coin-or.org/Osi
+  summary: 'Osi (Open Solver Interface) provides an abstract base class to a generic linear programming (LP) solver, along with derived classes for specific solvers.'
+  license: 'Eclipse Public License (EPL).'
