@@ -1,5 +1,7 @@
-./configure \\
+chmod +x ./configure
+./configure \
   --prefix=$PREFIX
 
-VERBOSE=1 ./make
+make -j $CPU_COUNT V=1
+
 make install
