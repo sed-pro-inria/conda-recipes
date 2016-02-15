@@ -1,0 +1,14 @@
+package:
+  name: clp
+  version: 1.16.9
+
+source:
+  fn: Clp-1.16.9.tgz
+  url: http://www.coin-or.org/download/source/Clp/Clp-1.16.9.tgz
+build:
+  number: 0 
+
+about:
+  home: https://projects.coin-or.org/Clp
+  summary: 'Clp (Coin-or linear programming) is an open-source linear programming solver written in C++.'
+  license: 'Eclipse Public License (EPL).'
