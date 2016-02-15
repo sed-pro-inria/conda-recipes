@@ -1,5 +1,5 @@
 package:
-  name: Clp
+  name: clp
   version: 1.16.9
 
 source:
