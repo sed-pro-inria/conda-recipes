@@ -1,0 +1,5 @@
+Parallel in not support in C++ API, so --enable-cxx and --enable-parallel flags
+are incompatible.
+
+See for example:
+http://hdf-forum.184993.n3.nabble.com/configure-on-mac-os-x-with-mpi-cxx-td2909982.html

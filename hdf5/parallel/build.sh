@@ -2,10 +2,11 @@
 
 ./configure \
     --prefix=$PREFIX \
-    --enable-linux-lfs \
     --with-zlib=$PREFIX \
     --with-ssl \
-    --enable-cxx
+    --enable-linux-lfs \
+    --enable-parallel \
+    --enable-shared
 
 make
 
