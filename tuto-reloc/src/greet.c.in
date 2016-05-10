@@ -1,8 +1,0 @@
-#include <stdio.h>
-#include "greet.h"
-
-void
-greet()
-{
-    printf("Hello, this is an hardcoded path: PREFIX\n");
-}

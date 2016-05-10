@@ -1,1 +1,0 @@
-make PREFIX=$PREFIX install
