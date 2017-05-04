@@ -109,6 +109,74 @@ Relationships between main libraries are (blue indicate package provided by
     sympy [color=blue]
     CMake [color=blue]
 
+Image processing libraries (not yet available)
+-------------------------------------------------------------------
+
+.. list-table:: 
+   :widths: 10 30 10
+   :header-rows: 1
+
+   * - Package
+     - Description
+     - Links
+
+   * - `OpenMVS <http://cdcseacave.github.io/openMVS/>`_
+     - OpenMVS (Multi-View Stereo) is a library for computer-vision scientists
+       and especially targeted to the Multi-View Stereo reconstruction
+       community. 
+     - recipe,
+       packages
+
+   * - `OpenMVG <http://imagine.enpc.fr/~moulonp/openMVG/>`_
+     - "open Multiple View Geometry" is a library for computer-vision
+       scientists and especially targeted to the Multiple View Geometry
+       community.
+     - recipe,
+       packages
+
+   * - `GLFW <http://www.glfw.org/>`_
+     - GLFW is an Open Source, multi-platform library for creating windows
+       with OpenGL contexts and receiving input and events.
+     - recipe,
+       package
+
+   * - `OpenExif <http://openexif.sourceforge.net/>`_
+     - OpenExif is an object-oriented library for accessing Exif formatted
+       JPEG image files.
+     - recipe,
+       package
+
+   * - `OSI <https://projects.coin-or.org/Osi>`_
+     - Osi (Open Solver Interface) provides an abstract base class to a
+       generic linear programming (LP) solver, along with derived classes for
+       specific solvers.
+     - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/osi>`__,
+       package
+
+   * - `CLP <https://projects.coin-or.org/Clp/wiki>`_
+     - Clp (Coin-or linear programming) is an open-source linear programming
+       solver written in C++.
+     - `recipe <https://github.com/sed-pro-inria/conda-recipes/tree/master/clp>`__,
+       package
+
+   * - `Mesa <http://www.mesa3d.org/>`_
+     -  Mesa is an open-source implementation of the OpenGL specification - a
+        system for rendering interactive 3D graphics.
+     - recipe not available,
+       `package <https://repo.continuum.io/pkgs/>`__
+
+
+.. digraph:: OpenMVS
+
+   OpenMVS -> OpenMVG
+   OpenMVG -> GLFW
+   OpenMVG -> OpenEXIF
+   OpenMVG -> CLP
+   OpenMVG -> OSI
+   GLFW -> Mesa
+
+   Mesa [color=blue]
+
 Software engineering tools
 -------------------------------------------------------------------
 
@@ -176,11 +244,11 @@ Relationships between main libraries are (blue indicate package provided by
    nbtools -> ghdiff
    ghdiff -> chardet 
 
-    Python [color=blue]
-    Jinja2 [color=blue]
-    matplotlib [color=blue]
-    nose [color=blue]
-    "IPython Notebook" [color=blue]
+   Python [color=blue]
+   Jinja2 [color=blue]
+   matplotlib [color=blue]
+   nose [color=blue]
+   "IPython Notebook" [color=blue]
 
 File format libraries
 -------------------------------------------------------------------
